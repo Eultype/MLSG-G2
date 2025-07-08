@@ -1,0 +1,28 @@
+/* ================================== CSS SAM =================================== */
+
+/* ============ BORDERS ============== */
+.border-prune {
+    border-color: #E30056 !important;
+}
+
+/* ============= BOUTONS ============= */
+.btn-turq-ml {
+    background: #00A89F;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.btn-turq-ml:hover,
+.btn-turq-ml:focus {
+    background: #00887d; /* version plus foncée au survol */
+    color: #fff;
+}
+
+/* ============== TITRES ============= */
+h3 {
+    color: #7E2C5C;
+}
+/* ================================= FIN CSS SAM ================================ */
