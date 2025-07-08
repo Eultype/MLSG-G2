@@ -1,0 +1,19 @@
+.btn{
+
+   background-color: rgb(126, 44, 92);
+   padding:30px;
+   color: white;
+}
+
+.btn:hover{
+
+   background-color: rgb(227, 0, 86);
+   padding:30px;
+   color: white;
+}
+
+
+.presentation1{
+  border: rgb(227, 0, 86);
+  
+ }

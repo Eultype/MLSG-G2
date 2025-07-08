@@ -16,10 +16,9 @@
 
 
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="../assets/css/fontawesome.css">
-    <link rel="stylesheet" href="../assets/css/templatemo-edu-meeting.css">
-    <link rel="stylesheet" href="../assets/css/owl.css">
-    <link rel="stylesheet" href="../assets/css/lightbox.css">
+   
+    <link rel="stylesheet" href="../assets/css/style.css">
+
 <!--
 
 TemplateMo 569 Edu Meeting
@@ -33,89 +32,46 @@ https://templatemo.com/tm-569-edu-meeting
 
    
 
-  <!-- Sub Header -->
-  <div class="sub-header">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-sm-8">
-          <div class="left-content">
-            <p>This is an educational <em>HTML CSS</em> template by TemplateMo website.</p>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-4">
-          <div class="right-icons">
-            <ul>
-              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fa fa-behance"></i></a></li>
-              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- ***** Header Area Start ***** -->
   <header class="header-area header-sticky">
-      <div class="container">
-          <div class="row">
-              <div class="col-12">
-                  <nav class="main-nav">
-                      <!-- ***** Logo Start ***** -->
-                      <a href="accueil.html" class="logo">
-                      </a>
-                      <!-- ***** Logo End ***** -->
-                      <!-- ***** Menu Start ***** -->
-                      <ul class="nav">
-                          <li class="scroll-to-section"><a href="#top" class="active">Accueil</a></li>
-                          <li><a href="accompagnement.html">Qui sommes-nous ?</a></li>
-                          <li class="scroll-to-section"><a href="#apply">Accompagnement</a></li>
-                          <li class="has-sub">
-                              <a href="javascript:void(0)">Orientation</a>
-                              <ul class="sub-menu">
-                                  <li><a href="accompagnement.html">Upcoming Meetings</a></li>
-                                  <li><a href="qui-sommes-nous.html">Meeting Details</a></li>
-                              </ul>
-                          </li>
-                          <li class="scroll-to-section"><a href="#courses">Agenda formations</a></li>
-                          <li class="scroll-to-section"><a href="#contact">Nos offres d'emploi</a></li>
-                          <li><a href="#">Biotiful</a></li>
-                          <li><a href="#">Contact</a></li>
-                      </ul>
-                      <a class='menu-trigger'>
-                          <span>Menu</span>
-                      </a>
-                      <!-- ***** Menu End ***** -->
-                  </nav>
-              </div>
-          </div>
-      </div>
+ 
   </header>
 
 
  
-</body>
-<div class="container col-lg-12 m-5">
-  <div>
-    <h2 bg>Qui sommes-nous ?</h2>
-  </div>
 
-<div class="container">
-  <div>
-    <p>NOS MISSIONS, NOTRE MÉTHODE, NOS VALEURS</p>
+<div class="container col-lg-12 mt-5 text-center ">
+  <div class="presentation1">
+      <img class="col-lg-4 mt-5 mb-5 " src="../assets/images/presentation1.jpg" alt="">
   </div>
-  <div>
-    <p>L’ÉQUIPE</p>
-  </div>
-  <div>
-    <p>LE CONSEIL D’ADMINISTRATION</p>
-  </div>
-  <div>
-    <p>LE CONSEIL D’ADMINISTRATION</p>
-  </div>
-</section>
+    <h2 class="mt-2 border-bottom p-3">Qui sommes-nous ?</h2>
+    <p id="qui" class="mt-4 mb-5">La Mission Locale pour l’emploi de Saint-Gilles (MLSG) est une ASBL d’insertion socioprofessionnelle créée en 1988 au service des demandeur.se.s d’emploi bruxellois les plus éloigné.e.s de l’emploi de qualité. Opérateur de formation agréé par la Cocof, la MLSG est également agréée par la Région Bruxelloise en tant que "Mission Locale pour l’emploi". Elle emploie vingt-cinq travailleur.se.s, dont quatre dans le cadre de programmes de transition professionnelle, et accompagne, forme et-ou oriente près de 1.000 chercheurs d’emploi par an.
+    </p>
+</div>
+<div class="container col-lg-12 mt-5 text-center">
+  <div class="row justify-content-center flex-wrap gap-3">
 
+    <div class="col-auto">
+      <button id="mission" class="btn">
+        NOS MISSIONS, NOTRE MÉTHODE, NOS VALEURS
+      </button>
+    </div>
+
+    <div class="col-auto">
+      <button id="equipe" class="btn">L’ÉQUIPE</button>
+    </div>
+
+    <div class="col-auto">
+      <button class="btn">LE CONSEIL D’ADMINISTRATION</button>
+    </div>
+
+    <div class="col-auto">
+      <button class="btn">PARTENAIRES ADHESIONS</button>
+    </div>
+
+  </div>
+</div>
 
   </body>
 
@@ -134,6 +90,29 @@ https://templatemo.com/tm-569-edu-meeting
     <script src="../assets/js/custom.js"></script>
     <script>
         //according to loftblog tut
+
+              
+        $(document).ready(function () {
+          $('#mission').click(function () {
+            $('#cadre-infos').slideToggle(500);
+          });
+        });
+        $(document).ready(function () {
+          $('#equipe').click(function () {
+            $('#cadre-equipe').slideToggle(500);
+          });
+        });
+
+
+       
+        $(document).ready(function () {
+        $('#qui')
+          .css({ display: 'block', opacity: 0, left: '-100%' })
+          .animate({ left: '0%', opacity: 1 }, 800);
+         });
+
+
+
         $('.nav li:first').addClass('active');
 
         var showSection = function showSection(section, isAnimate) {
