@@ -1,5 +1,36 @@
 /* ================================== CSS SAM =================================== */
 
+
+/* =========================== CONTACT =========================== */
+
+.contact-block {
+    position: relative;
+    z-index: 2;
+    /* Le reste de tes styles */
+    overflow: hidden; /* pour éviter que le ::before ne déborde */
+}
+
+.contact-block::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url('/assets/images/avion.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.10; /* ajuste l’opacité à ton goût */
+    pointer-events: none;
+}
+
+/* Pour que le texte reste lisible devant */
+.contact-block > * {
+    position: relative;
+    z-index: 2;
+}
+
+
+
 /* ============ BORDERS ============== */
 .border-prune {
     border-color: #E30056 !important;
@@ -10,19 +41,73 @@
     background: #00A89F;
     color: #fff;
     border: none;
-    border-radius: 6px;
     font-weight: 600;
     transition: background 0.2s;
 }
 
-.btn-turq-ml:hover,
-.btn-turq-ml:focus {
-    background: #00887d; /* version plus foncée au survol */
+.btn-turq-ml:hover{
+    background: #00887d;
     color: #fff;
 }
 
 /* ============== TITRES ============= */
-h3 {
+h1,
+h3,
+h5 {
     color: #7E2C5C;
 }
+/* ========================== FIN CONTACT ======================== */
+
+
+/* ======================= OFFRES D'EMPLOI ======================= */
+
+/* ============== CARTES ============= */
+.card {
+    width: 100%;
+    border: 2px solid #8D2676; /* prune par défaut */
+    transition:
+            box-shadow 0.3s cubic-bezier(0.4,0,0.2,1),
+            transform 0.22s cubic-bezier(0.4,0,0.2,1),
+            border-color 0.25s cubic-bezier(0.4,0,0.2,1);
+}
+
+.card img {
+    filter: brightness(0.7) saturate(1.07);
+    transition: filter 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+
+.card:hover, .card:focus-within {
+    transform: translateY(-6px) scale(1.027) rotate(-0.5deg);
+    box-shadow: 0 8px 24px rgba(19, 191, 166, 0.18), 0 2px 4px rgba(141, 38, 118, 0.12);
+    border-color: #8D2676;
+    cursor: pointer;
+}
+
+.card:hover .card-title,
+.card:focus-within .card-title {
+    color: #BE6AAD;
+    letter-spacing: 0.5px;
+}
+
+.card:hover img,
+.card:focus-within img {
+    filter: brightness(1) saturate(0.95);
+}
+
+.rac {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+span {
+    color: #E30056;
+    font-weight: bold;
+}
+
+
+/* ====================== FIN OFFRES D'EMPLOI ==================== */
+
+
 /* ================================= FIN CSS SAM ================================ */
