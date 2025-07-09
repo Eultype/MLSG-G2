@@ -3,11 +3,11 @@
 
 /* =========================== CONTACT =========================== */
 
+/* ======== BACKGROUND IMAGE ========= */
 .contact-block {
     position: relative;
     z-index: 2;
-    /* Le reste de tes styles */
-    overflow: hidden; /* pour éviter que le ::before ne déborde */
+    overflow: hidden;
 }
 
 .contact-block::before {
@@ -19,17 +19,23 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.10; /* ajuste l’opacité à ton goût */
+    opacity: 0.08;
     pointer-events: none;
 }
 
-/* Pour que le texte reste lisible devant */
-.contact-block > * {
-    position: relative;
-    z-index: 2;
+/* ============= LIENS =============== */
+
+#mail, #adresse {
+    color: #00A89F;
+    cursor: pointer;
+    transition: color 0.15s, text-decoration-color 0.2s;
 }
 
-
+#adresse:hover,
+#mail:hover{
+    color: #BE6AAD;
+    cursor: pointer;
+}
 
 /* ============ BORDERS ============== */
 .border-prune {
