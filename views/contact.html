@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
 
@@ -44,23 +44,22 @@
 <!-- Formulaire de contact -->
 <div class="container border border-3 border-prune rounded my-5 mx-auto bg-light shadow-lg">
     <div class="row justify-content-center rounded mb-3">
-
         <!-- Colonne gauche : Coordonnées/Infos Mission Locale -->
-        <div class="col-md-6 contact-block d-flex flex-column justify-content-center align-items-center text-center position-relative py-5">
+        <div class="col-12 col-lg-6 contact-block d-flex flex-column justify-content-center align-items-center text-center position-relative py-5 order-2 order-lg-1">
             <h3>📞 Appelez-nous</h3>
             <p class="text-turq-ml fw-bold mb-3">
                 Tel: 02 542 63 21<br>
                 GSM: 0476/68.07.93
             </p>
             <h3>✉️ Support général</h3>
-            <p class="text-turq-ml fw-bold mb-3">contact@mlsg.be</p>
+            <p id="mail" class="text-turq-ml fw-bold mb-3">contact@mlsg.be</p>
             <h3>⏰ Horaires d'ouvertures</h3>
             <p class="text-turq-ml fw-bold mb-3">
                 Tous les jours de 8h30h à 12h00 et de 13h00 à 16h00.<br>
                 Fermé le mercredi toute la journée.
             </p>
             <h3>📍 Adresse</h3>
-            <p class="text-turq-ml fw-bold mb-3">Chaussée de Waterloo 255 (2e étage) - 1060 Saint-Gilles</p>
+            <p id="adresse" class="text-turq-ml fw-bold mb-3">Chaussée de Waterloo 255 (2e étage) - 1060 Saint-Gilles</p>
             <h3>🚌 Accèssibilité</h3>
             <p class="text-turq-ml fw-bold mb-3">
                 Accès STIB : Tram 3, 4 et 51 (arrêt Horta)<br>
@@ -69,9 +68,8 @@
             </p>
         </div>
 
-        <div class="d-md-none"><hr></div>
         <!-- Colonne droite : Formulaire de contact -->
-        <div class="col-md-6 py-5">
+        <div class="col-12 col-lg-6 py-5 order-1 order-lg-2">
             <h3 class="text-center my-3">Contactez la Mission Locale</h3>
             <div class="verifMessage px-3 text-center my-1">
                 <div id="verifEmail"></div>
@@ -121,10 +119,11 @@
                 <div class="text-center">
                     <button type="submit" class="btn btn-turq-ml w-50">Envoyer le message</button>
                 </div>
+                <div class="d-lg-none"><hr></div>
             </form>
         </div>
     </div>
-    <div class="d-md-none"><hr></div>
+    <div class="d-lg-none"><hr></div>
     <div class="mb-3 text-center">
         <h3>Notre antenne à Saint-Gilles</h3>
     </div>
@@ -150,62 +149,38 @@
 <script src="../assets/js/slick-slider.js"></script>
 <script src="../assets/js/custom.js"></script>
 <script>
-    //according to loftblog tut
-    $('.nav li:first').addClass('active');
-
-    var showSection = function showSection(section, isAnimate) {
-        var
-            direction = section.replace(/#/, ''),
-            reqSection = $('.section').filter('[data-section="' + direction + '"]'),
-            reqSectionPos = reqSection.offset().top - 0;
-
-        if (isAnimate) {
-            $('body, html').animate({
-                    scrollTop: reqSectionPos },
-                800);
-        } else {
-            $('body, html').scrollTop(reqSectionPos);
-        }
-
-    };
-
-    var checkSection = function checkSection() {
-        $('.section').each(function () {
-            var
-                $this = $(this),
-                topEdge = $this.offset().top - 80,
-                bottomEdge = topEdge + $this.height(),
-                wScroll = $(window).scrollTop();
-            if (topEdge < wScroll && bottomEdge > wScroll) {
-                var
-                    currentId = $this.data('section'),
-                    reqLink = $('a').filter('[href*=\\#' + currentId + ']');
-                reqLink.closest('li').addClass('active').
-                siblings().removeClass('active');
-            }
-        });
-    };
-
-    $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
-        e.preventDefault();
-        showSection($(this).attr('href'), true);
-    });
-
-    $(window).scroll(function () {
-        checkSection();
-    });
-</script>
-<script>
     document.addEventListener("DOMContentLoaded", function () {
-        var map = L.map('map').setView([50.8247416, 4.3489723], 18);
+        let coords = [50.8247416, 4.3489723];
+        let map = L.map('map').setView(coords, 15);
 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }).addTo(map);
 
-        L.marker([50.8247416, 4.3489723]).addTo(map)
-            .bindPopup('<strong>Chaussée de Waterloo 255 - 1060 Saint-Gilles</strong>')
+        let marker = L.marker(coords).addTo(map)
+            .bindPopup('<strong>Chaussée de Waterloo 255 - 1060 Saint-Gilles</strong>');
+
+        let adresse = document.getElementById('adresse');
+        if (adresse) {
+            adresse.addEventListener('click', function () {
+                let mapDiv = document.getElementById('map');
+                if (mapDiv) {
+                    mapDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    map.flyTo(coords, 18, {
+                        animate: true,
+                        duration: 1.8
+                    });
+                    marker.openPopup();
+                }
+            });
+        }
     });
+
+    document.getElementById('mail').addEventListener('click', function() {
+        window.location.href = 'mailto:Sdarryy59@gmail.com';
+    });
+
 </script>
+
 </body>
 </html>

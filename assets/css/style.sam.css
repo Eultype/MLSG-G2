@@ -3,7 +3,7 @@
 
 /* =========================== CONTACT =========================== */
 
-/* =========== BACKGROUND ============ */
+/* ======== BACKGROUND IMAGE ========= */
 .contact-block {
     position: relative;
     z-index: 2;
@@ -19,13 +19,22 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.10;
+    opacity: 0.08;
     pointer-events: none;
 }
 
-.contact-block > * {
-    position: relative;
-    z-index: 2;
+/* ============= LIENS =============== */
+
+#mail, #adresse {
+    color: #00A89F;
+    cursor: pointer;
+    transition: color 0.15s, text-decoration-color 0.2s;
+}
+
+#adresse:hover,
+#mail:hover{
+    color: #BE6AAD;
+    cursor: pointer;
 }
 
 /* ============ BORDERS ============== */
