@@ -8,6 +8,10 @@
     font-weight: bold;
 }
 
+#contact:hover {
+    color: rgb(0, 168, 159) !important;
+}
+
 .footer {
     background-color: #1a1a1a;
     color: #fff;
