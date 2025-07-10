@@ -58,6 +58,7 @@
 
 /* ============== TITRES ============= */
 h1,
+h2,
 h3,
 h5 {
     color: #7E2C5C;
@@ -70,7 +71,7 @@ h5 {
 /* ============== CARTES ============= */
 .card {
     width: 100%;
-    border: 2px solid #8D2676; /* prune par défaut */
+    border: 2px solid #E30056;
     transition:
             box-shadow 0.3s cubic-bezier(0.4,0,0.2,1),
             transform 0.22s cubic-bezier(0.4,0,0.2,1),
@@ -83,10 +84,9 @@ h5 {
 }
 
 
-.card:hover, .card:focus-within {
+.card:hover {
     transform: translateY(-6px) scale(1.027) rotate(-0.5deg);
     box-shadow: 0 8px 24px rgba(19, 191, 166, 0.18), 0 2px 4px rgba(141, 38, 118, 0.12);
-    border-color: #8D2676;
     cursor: pointer;
 }
 
@@ -96,9 +96,12 @@ h5 {
     letter-spacing: 0.5px;
 }
 
-.card:hover img,
-.card:focus-within img {
+.card:hover img {
     filter: brightness(1) saturate(0.95);
+}
+
+.badge {
+    background-color: #8D2676;
 }
 
 .rac {
@@ -115,5 +118,94 @@ span {
 
 /* ====================== FIN OFFRES D'EMPLOI ==================== */
 
+
+
+/* =========================== ACCUEIL =========================== */
+
+/* =============== HERO ============== */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+}
+
+.btn-framboise {
+    background-color: #E30056;
+    color: white;
+}
+
+.btn-framboise:hover {
+    background-color: #c00049;
+    color: white;
+}
+
+.btn-turquoise {
+    border: 2px solid #00A89F;
+    color: #00A89F;
+    background: transparent;
+}
+
+.btn-turquoise:hover {
+    background-color: #00857e;
+    color: white;
+}
+
+.btn:focus, .btn:active, button:focus, button:active {
+    box-shadow: none !important;
+}
+
+/* ============== LOGOS ============== */
+.logos img {
+    height: 100px;
+    width: auto;
+    max-width: 100px;
+    object-fit: contain;
+}
+
+.title_turq {
+    color: #00A89F;
+}
+
+.title_fram {
+    color: #E30056;
+}
+
+.title_prune {
+    color: #8D2676;
+}
+
+hr {
+    opacity: 0.1;
+}
+
+/* ============== ACTUS ============== */
+.actus .card-text {
+    line-height: normal;
+    text-align: center;
+}
+
+.btn-plus {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #00A89F;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    transition: background 0.2s, color 0.2s;
+}
+.btn-plus:hover {
+    background: #00887d;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+/* ========================= FIN ACCUEIL ========================= */
 
 /* ================================= FIN CSS SAM ================================ */
