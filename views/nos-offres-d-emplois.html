@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="../assets/css/owl.css">
     <link rel="stylesheet" href="../assets/css/lightbox.css">
     <link rel="stylesheet" href="../assets/css/style.sam.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
@@ -37,552 +38,655 @@
 </head>
 
 <body class="pt-5">
-<!-- Navbar -->
+    <!-- Navbar -->
 
 
-<!-- Bannière offres d'emploi -->
-<div class="mb-3">
-    <div class="container">
-        <div class="row justify-content-center align-items-center">
-            <div class="col-12 col-lg-7 mx-auto">
-                <h1 class="mb-3 fw-bold">Les offres d'emploi de la <br>
-                    Mission locale de Saint-Gilles
-                </h1>
-                <p class="mb-3">Découvrez nos offres d'emploi dans le secteur de l'informatique, le secteur de l'HORECA,
-                   le secteur du Bâtiment et de l'Aide et Soin.
-                </p>
-                <a href="#informatique" class="btn btn-turq-ml">Nos offres d'emploi &darr;</a>
-            </div>
-            <div class="col-12 col-lg-5 mx-auto mt-3">
-                <img src="../assets/images/search_job2.jpg" alt="Banniere recherche d'emploi">
+    <!-- Bannière offres d'emploi -->
+    <div class="mb-3">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-12 col-lg-7 mx-auto">
+                    <h1 class="mb-3 fw-bold">Les offres d'emploi de la <br>
+                        Mission locale de Saint-Gilles
+                    </h1>
+                    <p class="mb-3">Découvrez nos offres d'emploi dans le secteur de l'informatique, le secteur de
+                        l'HORECA,
+                        le secteur du Bâtiment et de l'Aide et Soin.
+                    </p>
+                    <a href="#informatique" class="btn btn-turq-ml">Nos offres d'emploi &darr;</a>
+                </div>
+                <div class="col-12 col-lg-5 mx-auto mt-3">
+                    <img src="../assets/images/search_job2.jpg" alt="Banniere recherche d'emploi">
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<!-- Select - Filtre les offres d'emploi par secteur -->
-<div class="container my-1">
-    <label for="secteurSelect" class="form-label">Filtrer par secteur :</label>
-    <select id="secteurSelect" class="form-select" style="max-width: 200px;">
-        <option value="informatique">Informatique</option>
-        <option value="horeca">Horeca</option>
-        <option value="aide">Aide et Soin</option>
-        <option value="batiment">Bâtiment</option>
-        <option value="all">Tous les secteurs</option>
+    <!-- Select - Filtre les offres d'emploi par secteur -->
+    <div class="container my-1">
+        <label for="secteurSelect" class="form-label">Filtrer par secteur :</label>
+        <select id="secteurSelect" class="form-select" style="max-width: 200px;">
+            <option value="informatique">Informatique</option>
+            <option value="horeca">Horeca</option>
+            <option value="aide">Aide et Soin</option>
+            <option value="batiment">Bâtiment</option>
+            <option value="all">Tous les secteurs</option>
 
-    </select>
-</div>
+        </select>
+    </div>
 
 
-<!-- Offres d'emplois -->
+    <!-- Offres d'emplois -->
 
-<!-- Secteur Informatique -->
-<div id="informatique" class="secteur-block container border border-3 border-light rounded my-5 mx-auto bg-light shadow-lg">
-    <h3 class="text-center mt-3">Offres d'emploi - Secteur Informatique</h3>
+    <!-- Secteur Informatique -->
+    <div id="informatique"
+        class="secteur-block container border border-3 border-light rounded my-5 mx-auto bg-light shadow-lg">
+        <h3 class="text-center mt-3">Offres d'emploi - Secteur Informatique</h3>
 
-    <!-- Grille de cartes - Ordinateur et tablettes -->
-    <div class="row rounded mb-3 g-3 my-3 d-none d-md-flex">
+        <!-- Grille de cartes - Ordinateur et tablettes -->
+        <div class="row rounded mb-3 g-3 my-3 d-none d-md-flex">
 
-        <!-- Carte n°1 -->
-        <div class="col-md-6 col-lg-3">
-            <div class="card mb-3 shadow-sm rounded border-3 border-prune">
-                <img src="../assets/images/dev2.jpg" class="card-img-top" alt="Logo Mission Locale Saint-Gilles">
-                <div class="card-body bg-light">
-                    <h5 class="card-title" title="Développeur Web">Développeur Web</h5>
-                    <p class="card-text"><span>Salaire:</span> 2300 € brut</p>
-                    <p class="card-text"><b>Secteur:</b> Informatique</p>
-                    <p class="card-text"><b>Date:</b> 12/08/2025</p>
-                    <p class="card-text rac mb-3"><b>Description:</b> Conception et développement de sites web.</p>
-                    <a href="https://emplois.be.indeed.com/q-developpeur-web-emplois.html?vjk=ea5e9621f79b00a6&advn=6480773257263204" class="btn btn-turq-ml w-100" target="_blank">En savoir plus</a>
+            <!-- Carte n°1 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card mb-3 shadow-sm rounded border-3 border-prune">
+                    <img src="../assets/images/dev2.jpg" class="card-img-top" alt="Logo Mission Locale Saint-Gilles">
+                    <div class="card-body bg-light">
+                        <h5 class="card-title" title="Développeur Web">Développeur Web</h5>
+                        <p class="card-text"><span>Salaire:</span> 2300 € brut</p>
+                        <p class="card-text"><b>Secteur:</b> Informatique</p>
+                        <p class="card-text"><b>Date:</b> 12/08/2025</p>
+                        <p class="card-text rac mb-3"><b>Description:</b> Conception et développement de sites web.</p>
+                        <a href="https://emplois.be.indeed.com/q-developpeur-web-emplois.html?vjk=ea5e9621f79b00a6&advn=6480773257263204"
+                            class="btn btn-turq-ml w-100" target="_blank">En savoir plus</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carte n°2 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card mb-3 bg-light shadow-sm rounded border-3 border-prune">
+                    <img src="../assets/images/admin_reseau.png" class="card-img-top"
+                        alt="Logo Mission Locale Saint-Gilles">
+                    <div class="card-body">
+                        <h5 class="card-title rac" title="Administrateur Systèmes et Réseaux">Administrateur Systèmes et
+                            Réseaux</h5>
+                        <p class="card-text"><span>Salaire:</span> 2500 € brut</p>
+                        <p class="card-text"><b>Secteur:</b> Informatique</p>
+                        <p class="card-text"><b>Date:</b> 15/08/2025</p>
+                        <p class="card-text rac mb-3"><b>Description:</b> Gestion, maintenance et sécurité des serveurs
+                            et du réseau.</p>
+                        <a href="https://emplois.be.indeed.com/q-administrateur-systemes-reseaux-emplois.html"
+                            class="btn btn-turq-ml w-100" target="_blank">En savoir plus</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Carte n°3 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card mb-3 bg-light shadow-sm rounded border-3 border-prune">
+                    <img src="../assets/images/tech.jpg" class="card-img-top" alt="Logo Mission Locale Saint-Gilles">
+                    <div class="card-body">
+                        <h5 class="card-title rac" title="Technicien Informatique">Technicien·ne Informatique</h5>
+                        <p class="card-text"><span>Salaire:</span> 2100 € brut</p>
+                        <p class="card-text"><b>Secteur:</b> Informatique</p>
+                        <p class="card-text"><b>Date:</b> 19/08/2025</p>
+                        <p class="card-text rac mb-3"><b>Description:</b> Installation, maintenance et dépannage des
+                            équipements informatiques au sein des entreprises.</p>
+                        <a href="https://emplois.be.indeed.com/q-technicien-informatique-emplois.html"
+                            class="btn btn-turq-ml w-100" target="_blank">En savoir plus</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carte n°4 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card mb-3 bg-light shadow-sm rounded border-3 border-prune">
+                    <img src="../assets/images/tech_supp.png" class="card-img-top"
+                        alt="Logo Mission Locale Saint-Gilles">
+                    <div class="card-body">
+                        <h5 class="card-title rac" title="Technicien Support Informatique">Technicien·ne Support
+                            Informatique</h5>
+                        <p class="card-text"><span>Salaire:</span> 2000 € brut</p>
+                        <p class="card-text"><b>Secteur:</b> Informatique</p>
+                        <p class="card-text"><b>Date:</b> 20/08/2025</p>
+                        <p class="card-text rac mb-3"><b>Description:</b> Assistance aux utilisateurs, installation et
+                            maintenance du matériel et des logiciels.</p>
+                        <a href="https://emplois.be.indeed.com/q-technicien-support-informatique-emplois.html"
+                            class="btn btn-turq-ml w-100" target="_blank">En savoir plus</a>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- Carte n°2 -->
-        <div class="col-md-6 col-lg-3">
-            <div class="card mb-3 bg-light shadow-sm rounded border-3 border-prune">
-                <img src="../assets/images/admin_reseau.png" class="card-img-top" alt="Logo Mission Locale Saint-Gilles">
+        <!-- Cartes version mobile  -->
+        <div class="d-block d-md-none mb-3 g-3 my-3">
+
+            <!-- Carte mobile 1 -->
+            <div class="card mb-3 bg-light shadow-sm border-3 border-prune">
                 <div class="card-body">
-                    <h5 class="card-title rac" title="Administrateur Systèmes et Réseaux">Administrateur Systèmes et Réseaux</h5>
+                    <h5 class="card-title">Développeur Web</h5>
+                    <p class="card-text"><span>Salaire :</span> 2300 € brut</p>
+                    <p class="card-text"><b>Secteur :</b> Informatique</p>
+                    <p class="card-text"><b>Date :</b> 12/08/2025</p>
+                    <p class="card-text mb-3"><b>Description :</b> Conception et développement de sites web.</p>
+                    <a href="https://emplois.be.indeed.com/q-developpeur-web-emplois.html?vjk=ea5e9621f79b00a6&advn=6480773257263204"
+                        class="btn btn-turq-ml w-100" target="_blank">En savoir plus</a>
+                </div>
+            </div>
+            <!-- Carte mobile 2 -->
+            <div class="card mb-3 bg-light shadow-sm border-3 border-prune">
+                <div class="card-body">
+                    <h5 class="card-title">Administrateur Systèmes et Réseaux</h5>
                     <p class="card-text"><span>Salaire:</span> 2500 € brut</p>
                     <p class="card-text"><b>Secteur:</b> Informatique</p>
                     <p class="card-text"><b>Date:</b> 15/08/2025</p>
-                    <p class="card-text rac mb-3"><b>Description:</b> Gestion, maintenance et sécurité des serveurs et du réseau.</p>
-                    <a href="https://emplois.be.indeed.com/q-administrateur-systemes-reseaux-emplois.html" class="btn btn-turq-ml w-100" target="_blank">En savoir plus</a>
+                    <p class="card-text mb-3"><b>Description:</b> Gestion, maintenance et sécurité des serveurs et du
+                        réseau.</p>
+                    <a href="https://emplois.be.indeed.com/q-administrateur-systemes-reseaux-emplois.html"
+                        class="btn btn-turq-ml w-100" target="_blank">En savoir plus</a>
                 </div>
-
             </div>
-        </div>
-
-        <!-- Carte n°3 -->
-        <div class="col-md-6 col-lg-3">
-            <div class="card mb-3 bg-light shadow-sm rounded border-3 border-prune">
-                <img src="../assets/images/tech.jpg" class="card-img-top" alt="Logo Mission Locale Saint-Gilles">
+            <!-- Carte mobile 3 -->
+            <div class="card mb-3 bg-light shadow-sm border-3 border-prune">
                 <div class="card-body">
-                    <h5 class="card-title rac" title="Technicien Informatique">Technicien·ne Informatique</h5>
+                    <h5 class="card-title">Technicien·ne Informatique</h5>
                     <p class="card-text"><span>Salaire:</span> 2100 € brut</p>
                     <p class="card-text"><b>Secteur:</b> Informatique</p>
                     <p class="card-text"><b>Date:</b> 19/08/2025</p>
-                    <p class="card-text rac mb-3"><b>Description:</b> Installation, maintenance et dépannage des équipements informatiques au sein des entreprises.</p>
-                    <a href="https://emplois.be.indeed.com/q-technicien-informatique-emplois.html" class="btn btn-turq-ml w-100" target="_blank">En savoir plus</a>
+                    <p class="card-text mb-3"><b>Description:</b> Installation, maintenance et dépannage des équipements
+                        informatiques au sein des entreprises.</p>
+                    <a href="https://emplois.be.indeed.com/q-technicien-informatique-emplois.html"
+                        class="btn btn-turq-ml w-100" target="_blank">En savoir plus</a>
                 </div>
             </div>
-        </div>
-
-        <!-- Carte n°4 -->
-        <div class="col-md-6 col-lg-3">
-            <div class="card mb-3 bg-light shadow-sm rounded border-3 border-prune">
-                <img src="../assets/images/tech_supp.png" class="card-img-top" alt="Logo Mission Locale Saint-Gilles">
+            <!-- Carte mobile 4 -->
+            <div class="card mb-3 bg-light shadow-sm border-3 border-prune">
                 <div class="card-body">
-                    <h5 class="card-title rac" title="Technicien Support Informatique">Technicien·ne Support Informatique</h5>
+                    <h5 class="card-title">Technicien·ne Support Informatique</h5>
                     <p class="card-text"><span>Salaire:</span> 2000 € brut</p>
                     <p class="card-text"><b>Secteur:</b> Informatique</p>
                     <p class="card-text"><b>Date:</b> 20/08/2025</p>
-                    <p class="card-text rac mb-3"><b>Description:</b> Assistance aux utilisateurs, installation et maintenance du matériel et des logiciels.</p>
-                    <a href="https://emplois.be.indeed.com/q-technicien-support-informatique-emplois.html" class="btn btn-turq-ml w-100" target="_blank">En savoir plus</a>
+                    <p class="card-text mb-3"><b>Description:</b> Assistance aux utilisateurs, installation et
+                        maintenance du matériel et des logiciels.</p>
+                    <a href="https://emplois.be.indeed.com/q-technicien-support-informatique-emplois.html"
+                        class="btn btn-turq-ml w-100" target="_blank">En savoir plus</a>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Cartes version mobile  -->
-    <div class="d-block d-md-none mb-3 g-3 my-3">
 
-        <!-- Carte mobile 1 -->
-        <div class="card mb-3 bg-light shadow-sm border-3 border-prune">
-            <div class="card-body">
-                <h5 class="card-title">Développeur Web</h5>
-                <p class="card-text"><span>Salaire :</span> 2300 € brut</p>
-                <p class="card-text"><b>Secteur :</b> Informatique</p>
-                <p class="card-text"><b>Date :</b> 12/08/2025</p>
-                <p class="card-text mb-3"><b>Description :</b> Conception et développement de sites web.</p>
-                <a href="https://emplois.be.indeed.com/q-developpeur-web-emplois.html?vjk=ea5e9621f79b00a6&advn=6480773257263204" class="btn btn-turq-ml w-100" target="_blank">En savoir plus</a>
+
+    <!-- Secteur Horeca -->
+    <div id="horeca"
+        class="secteur-block container border border-3 border-light rounded my-5 mx-auto bg-light shadow-lg">
+        <h3 class="text-center mt-3">Offres d'emploi - Secteur Horeca</h3>
+        <!-- Grille de cartes - Ordinateur et tablettes -->
+        <div class="row rounded mb-3 g-3 my-3 d-none d-md-flex">
+
+            <!-- Carte n°1 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card mb-3 bg-light shadow-sm rounded border-3 border-prune">
+                    <img src="../assets/images/chef.png" class="card-img-top" alt="Logo Mission Locale Saint-Gilles">
+                    <div class="card-body">
+                        <h5 class="card-title rac" title="Chef de Rang">Chef de Rang</h5>
+                        <p class="card-text"><span>Salaire:</span> 2000 € brut</p>
+                        <p class="card-text"><b>Secteur:</b> Horeca</p>
+                        <p class="card-text"><b>Date:</b> 21/08/2025</p>
+                        <p class="card-text rac mb-3"><b>Description:</b> Accueil des clients, gestion d’une section en
+                            salle et coordination de l’équipe de serveurs.</p>
+                        <a href="https://emplois.be.indeed.com/q-chef-de-rang-emplois.html"
+                            class="btn btn-turq-ml w-100" target="_blank">En savoir plus</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carte n°2 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card mb-3 bg-light shadow-sm rounded border-3 border-prune">
+                    <img src="../assets/images/serveurs.png" class="card-img-top"
+                        alt="Logo Mission Locale Saint-Gilles">
+                    <div class="card-body">
+                        <h5 class="card-title rac" title="Serveur / Serveuse en salle">Serveur·se en salle</h5>
+                        <p class="card-text"><span>Salaire:</span> 1900 € brut</p>
+                        <p class="card-text"><b>Secteur:</b> Horeca</p>
+                        <p class="card-text"><b>Date:</b> 23/08/2025</p>
+                        <p class="card-text rac mb-3"><b>Description:</b> Accueil des clients, prise de commandes,
+                            service des plats et boissons, encaissement et nettoyage de la salle.</p>
+                        <a href="https://emplois.be.indeed.com/q-serveur-salle-emplois.html"
+                            class="btn btn-turq-ml w-100" target="_blank">En savoir plus</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carte n°3 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card mb-3 bg-light shadow-sm rounded border-3 border-prune">
+                    <img src="../assets/images/commis.png" class="card-img-top" alt="Logo Mission Locale Saint-Gilles">
+                    <div class="card-body">
+                        <h5 class="card-title rac" title="Commis de cuisine">Commis de cuisine</h5>
+                        <p class="card-text"><span>Salaire:</span> 1850 € brut</p>
+                        <p class="card-text"><b>Secteur:</b> Horeca</p>
+                        <p class="card-text"><b>Date:</b> 26/08/2025</p>
+                        <p class="card-text rac mb-3"><b>Description:</b> Aide à la préparation des plats, réception et
+                            rangement des provisions, nettoyage et entretien de la cuisine.</p>
+                        <a href="https://emplois.be.indeed.com/q-commis-de-cuisine-emplois.html"
+                            class="btn btn-turq-ml w-100" target="_blank">En savoir plus</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carte n°4 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card mb-3 bg-light shadow-sm rounded border-3 border-prune">
+                    <img src="../assets/images/barmaid.png" class="card-img-top" alt="Logo Mission Locale Saint-Gilles">
+                    <div class="card-body">
+                        <h5 class="card-title rac" title="Barman / Barmaid">Barman / Barmaid</h5>
+                        <p class="card-text"><span>Salaire:</span> 2000 € brut</p>
+                        <p class="card-text"><b>Secteur:</b> Horeca</p>
+                        <p class="card-text"><b>Date:</b> 29/08/2025</p>
+                        <p class="card-text rac mb-3"><b>Description:</b> Préparation et service des boissons, création
+                            de cocktails, gestion du bar et conseils aux clients.</p>
+                        <a href="https://emplois.be.indeed.com/q-barman-barmaid-emplois.html"
+                            class="btn btn-turq-ml w-100" target="_blank">En savoir plus</a>
+                    </div>
+                </div>
             </div>
         </div>
-        <!-- Carte mobile 2 -->
-        <div class="card mb-3 bg-light shadow-sm border-3 border-prune">
-            <div class="card-body">
-                <h5 class="card-title">Administrateur Systèmes et Réseaux</h5>
-                <p class="card-text"><span>Salaire:</span> 2500 € brut</p>
-                <p class="card-text"><b>Secteur:</b> Informatique</p>
-                <p class="card-text"><b>Date:</b> 15/08/2025</p>
-                <p class="card-text mb-3"><b>Description:</b> Gestion, maintenance et sécurité des serveurs et du réseau.</p>
-                <a href="https://emplois.be.indeed.com/q-administrateur-systemes-reseaux-emplois.html" class="btn btn-turq-ml w-100" target="_blank">En savoir plus</a>
-            </div>
-        </div>
-        <!-- Carte mobile 3 -->
-        <div class="card mb-3 bg-light shadow-sm border-3 border-prune">
-            <div class="card-body">
-                <h5 class="card-title">Technicien·ne Informatique</h5>
-                <p class="card-text"><span>Salaire:</span> 2100 € brut</p>
-                <p class="card-text"><b>Secteur:</b> Informatique</p>
-                <p class="card-text"><b>Date:</b> 19/08/2025</p>
-                <p class="card-text mb-3"><b>Description:</b> Installation, maintenance et dépannage des équipements informatiques au sein des entreprises.</p>
-                <a href="https://emplois.be.indeed.com/q-technicien-informatique-emplois.html" class="btn btn-turq-ml w-100" target="_blank">En savoir plus</a>
-            </div>
-        </div>
-        <!-- Carte mobile 4 -->
-        <div class="card mb-3 bg-light shadow-sm border-3 border-prune">
-            <div class="card-body">
-                <h5 class="card-title">Technicien·ne Support Informatique</h5>
-                <p class="card-text"><span>Salaire:</span> 2000 € brut</p>
-                <p class="card-text"><b>Secteur:</b> Informatique</p>
-                <p class="card-text"><b>Date:</b> 20/08/2025</p>
-                <p class="card-text mb-3"><b>Description:</b> Assistance aux utilisateurs, installation et maintenance du matériel et des logiciels.</p>
-                <a href="https://emplois.be.indeed.com/q-technicien-support-informatique-emplois.html" class="btn btn-turq-ml w-100" target="_blank">En savoir plus</a>
-            </div>
-        </div>
-    </div>
-</div>
 
+        <!-- Cartes version mobile  -->
+        <div class="d-block d-md-none mb-3 g-3 my-3">
 
-
-<!-- Secteur Horeca -->
-<div id="horeca" class="secteur-block container border border-3 border-light rounded my-5 mx-auto bg-light shadow-lg">
-    <h3 class="text-center mt-3">Offres d'emploi - Secteur Horeca</h3>
-    <!-- Grille de cartes - Ordinateur et tablettes -->
-    <div class="row rounded mb-3 g-3 my-3 d-none d-md-flex">
-
-        <!-- Carte n°1 -->
-        <div class="col-md-6 col-lg-3">
-            <div class="card mb-3 bg-light shadow-sm rounded border-3 border-prune">
-                <img src="../assets/images/chef.png" class="card-img-top" alt="Logo Mission Locale Saint-Gilles">
+            <!-- Carte mobile 1 -->
+            <div class="card mb-3 bg-light shadow-sm border-3 border-prune">
                 <div class="card-body">
-                    <h5 class="card-title rac" title="Chef de Rang">Chef de Rang</h5>
+                    <h5 class="card-title">Chef de Rang</h5>
                     <p class="card-text"><span>Salaire:</span> 2000 € brut</p>
                     <p class="card-text"><b>Secteur:</b> Horeca</p>
                     <p class="card-text"><b>Date:</b> 21/08/2025</p>
-                    <p class="card-text rac mb-3"><b>Description:</b> Accueil des clients, gestion d’une section en salle et coordination de l’équipe de serveurs.</p>
-                    <a href="https://emplois.be.indeed.com/q-chef-de-rang-emplois.html" class="btn btn-turq-ml w-100" target="_blank">En savoir plus</a>
+                    <p class="card-text mb-3"><b>Description:</b> Accueil des clients, gestion d’une section en salle et
+                        coordination de l’équipe de serveurs.</p>
+                    <a href="https://emplois.be.indeed.com/q-chef-de-rang-emplois.html" class="btn btn-turq-ml w-100"
+                        target="_blank" rel="noopener noreferrer">En savoir plus</a>
                 </div>
             </div>
-        </div>
-
-        <!-- Carte n°2 -->
-        <div class="col-md-6 col-lg-3">
-            <div class="card mb-3 bg-light shadow-sm rounded border-3 border-prune">
-                <img src="../assets/images/serveurs.png" class="card-img-top" alt="Logo Mission Locale Saint-Gilles">
+            <!-- Carte mobile 2 -->
+            <div class="card mb-3 bg-light shadow-sm border-3 border-prune">
                 <div class="card-body">
-                    <h5 class="card-title rac" title="Serveur / Serveuse en salle">Serveur·se en salle</h5>
+                    <h5 class="card-title">Serveur·se en salle</h5>
                     <p class="card-text"><span>Salaire:</span> 1900 € brut</p>
                     <p class="card-text"><b>Secteur:</b> Horeca</p>
                     <p class="card-text"><b>Date:</b> 23/08/2025</p>
-                    <p class="card-text rac mb-3"><b>Description:</b> Accueil des clients, prise de commandes, service des plats et boissons, encaissement et nettoyage de la salle.</p>
-                    <a href="https://emplois.be.indeed.com/q-serveur-salle-emplois.html" class="btn btn-turq-ml w-100" target="_blank">En savoir plus</a>
+                    <p class="card-text mb-3"><b>Description:</b> Accueil des clients, prise de commandes, service des
+                        plats et boissons, encaissement et nettoyage de la salle.</p>
+                    <a href="https://emplois.be.indeed.com/q-serveur-salle-emplois.html" class="btn btn-turq-ml w-100"
+                        target="_blank" rel="noopener noreferrer">En savoir plus</a>
                 </div>
             </div>
-        </div>
-
-        <!-- Carte n°3 -->
-        <div class="col-md-6 col-lg-3">
-            <div class="card mb-3 bg-light shadow-sm rounded border-3 border-prune">
-                <img src="../assets/images/commis.png" class="card-img-top" alt="Logo Mission Locale Saint-Gilles">
+            <!-- Carte mobile 3 -->
+            <div class="card mb-3 bg-light shadow-sm border-3 border-prune">
                 <div class="card-body">
-                    <h5 class="card-title rac" title="Commis de cuisine">Commis de cuisine</h5>
+                    <h5 class="card-title">Commis de cuisine</h5>
                     <p class="card-text"><span>Salaire:</span> 1850 € brut</p>
                     <p class="card-text"><b>Secteur:</b> Horeca</p>
                     <p class="card-text"><b>Date:</b> 26/08/2025</p>
-                    <p class="card-text rac mb-3"><b>Description:</b> Aide à la préparation des plats, réception et rangement des provisions, nettoyage et entretien de la cuisine.</p>
-                    <a href="https://emplois.be.indeed.com/q-commis-de-cuisine-emplois.html" class="btn btn-turq-ml w-100" target="_blank">En savoir plus</a>
+                    <p class="card-text mb-3"><b>Description:</b> Aide à la préparation des plats, réception et
+                        rangement des provisions, nettoyage et entretien de la cuisine.</p>
+                    <a href="https://emplois.be.indeed.com/q-commis-de-cuisine-emplois.html"
+                        class="btn btn-turq-ml w-100" target="_blank" rel="noopener noreferrer">En savoir plus</a>
                 </div>
             </div>
-        </div>
-
-        <!-- Carte n°4 -->
-        <div class="col-md-6 col-lg-3">
-            <div class="card mb-3 bg-light shadow-sm rounded border-3 border-prune">
-                <img src="../assets/images/barmaid.png" class="card-img-top" alt="Logo Mission Locale Saint-Gilles">
+            <!-- Carte mobile 4 -->
+            <div class="card mb-3 bg-light shadow-sm border-3 border-prune">
                 <div class="card-body">
-                    <h5 class="card-title rac" title="Barman / Barmaid">Barman / Barmaid</h5>
+                    <h5 class="card-title">Barman / Barmaid</h5>
                     <p class="card-text"><span>Salaire:</span> 2000 € brut</p>
                     <p class="card-text"><b>Secteur:</b> Horeca</p>
                     <p class="card-text"><b>Date:</b> 29/08/2025</p>
-                    <p class="card-text rac mb-3"><b>Description:</b> Préparation et service des boissons, création de cocktails, gestion du bar et conseils aux clients.</p>
-                    <a href="https://emplois.be.indeed.com/q-barman-barmaid-emplois.html" class="btn btn-turq-ml w-100" target="_blank">En savoir plus</a>
+                    <p class="card-text mb-3"><b>Description:</b> Préparation et service des boissons, création de
+                        cocktails, gestion du bar et conseils aux clients.</p>
+                    <a href="https://emplois.be.indeed.com/q-barman-barmaid-emplois.html" class="btn btn-turq-ml w-100"
+                        target="_blank">En savoir plus</a>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Cartes version mobile  -->
-    <div class="d-block d-md-none mb-3 g-3 my-3">
+    <div id="aide" class="secteur-block container border border-3 border-light rounded my-5 mx-auto bg-light shadow-lg">
+        <h3 class="text-center mt-3">Offres d'emploi - Secteur Aide et Soin</h3>
+        <!-- Grille de cartes - Ordinateur et tablettes -->
+        <div class="row rounded mb-3 g-3 my-3 d-none d-md-flex">
 
-        <!-- Carte mobile 1 -->
-        <div class="card mb-3 bg-light shadow-sm border-3 border-prune">
-            <div class="card-body">
-                <h5 class="card-title">Chef de Rang</h5>
-                <p class="card-text"><span>Salaire:</span> 2000 € brut</p>
-                <p class="card-text"><b>Secteur:</b> Horeca</p>
-                <p class="card-text"><b>Date:</b> 21/08/2025</p>
-                <p class="card-text mb-3"><b>Description:</b> Accueil des clients, gestion d’une section en salle et coordination de l’équipe de serveurs.</p>
-                <a href="https://emplois.be.indeed.com/q-chef-de-rang-emplois.html" class="btn btn-turq-ml w-100" target="_blank" rel="noopener noreferrer">En savoir plus</a>
+            <!-- Carte n°1 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card mb-3 bg-light shadow-sm rounded border-3 border-prune">
+                    <img src="../assets/images/aide_soignant.png" class="card-img-top"
+                        alt="Logo Mission Locale Saint-Gilles">
+                    <div class="card-body">
+                        <h5 class="card-title rac" title="Aide-soignant·e">Aide-soignant·e</h5>
+                        <p class="card-text"><span>Salaire:</span> 2100 € brut</p>
+                        <p class="card-text"><b>Secteur:</b> Aide et Soin</p>
+                        <p class="card-text"><b>Date:</b> 10/08/2025</p>
+                        <p class="card-text rac mb-3"><b>Description:</b> Accompagnement des patients dans les soins
+                            quotidiens, aide à la mobilité, soutien moral et collaboration avec l’équipe de soins.</p>
+                        <a href="https://emplois.be.indeed.com/q-aide-soignant-emplois.html"
+                            class="btn btn-turq-ml w-100" target="_blank">En savoir plus</a>
+                    </div>
+                </div>
             </div>
-        </div>
-        <!-- Carte mobile 2 -->
-        <div class="card mb-3 bg-light shadow-sm border-3 border-prune">
-            <div class="card-body">
-                <h5 class="card-title">Serveur·se en salle</h5>
-                <p class="card-text"><span>Salaire:</span> 1900 € brut</p>
-                <p class="card-text"><b>Secteur:</b> Horeca</p>
-                <p class="card-text"><b>Date:</b> 23/08/2025</p>
-                <p class="card-text mb-3"><b>Description:</b> Accueil des clients, prise de commandes, service des plats et boissons, encaissement et nettoyage de la salle.</p>
-                <a href="https://emplois.be.indeed.com/q-serveur-salle-emplois.html" class="btn btn-turq-ml w-100" target="_blank" rel="noopener noreferrer">En savoir plus</a>
-            </div>
-        </div>
-        <!-- Carte mobile 3 -->
-        <div class="card mb-3 bg-light shadow-sm border-3 border-prune">
-            <div class="card-body">
-                <h5 class="card-title">Commis de cuisine</h5>
-                <p class="card-text"><span>Salaire:</span> 1850 € brut</p>
-                <p class="card-text"><b>Secteur:</b> Horeca</p>
-                <p class="card-text"><b>Date:</b> 26/08/2025</p>
-                <p class="card-text mb-3"><b>Description:</b> Aide à la préparation des plats, réception et rangement des provisions, nettoyage et entretien de la cuisine.</p>
-                <a href="https://emplois.be.indeed.com/q-commis-de-cuisine-emplois.html" class="btn btn-turq-ml w-100" target="_blank" rel="noopener noreferrer">En savoir plus</a>
-            </div>
-        </div>
-        <!-- Carte mobile 4 -->
-        <div class="card mb-3 bg-light shadow-sm border-3 border-prune">
-            <div class="card-body">
-                <h5 class="card-title">Barman / Barmaid</h5>
-                <p class="card-text"><span>Salaire:</span> 2000 € brut</p>
-                <p class="card-text"><b>Secteur:</b> Horeca</p>
-                <p class="card-text"><b>Date:</b> 29/08/2025</p>
-                <p class="card-text mb-3"><b>Description:</b> Préparation et service des boissons, création de cocktails, gestion du bar et conseils aux clients.</p>
-                <a href="https://emplois.be.indeed.com/q-barman-barmaid-emplois.html" class="btn btn-turq-ml w-100" target="_blank">En savoir plus</a>
-            </div>
-        </div>
-    </div>
-</div>
 
-<div id="aide" class="secteur-block container border border-3 border-light rounded my-5 mx-auto bg-light shadow-lg">
-    <h3 class="text-center mt-3">Offres d'emploi - Secteur Aide et Soin</h3>
-    <!-- Grille de cartes - Ordinateur et tablettes -->
-    <div class="row rounded mb-3 g-3 my-3 d-none d-md-flex">
+            <!-- Carte n°2 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card mb-3 bg-light shadow-sm rounded border-3 border-prune">
+                    <img src="../assets/images/infirmier.png" class="card-img-top"
+                        alt="Logo Mission Locale Saint-Gilles">
+                    <div class="card-body">
+                        <h5 class="card-title rac" title="Infirmier·ère">Infirmier·ère</h5>
+                        <p class="card-text"><span>Salaire:</span> 2500 € brut</p>
+                        <p class="card-text"><b>Secteur:</b> Aide et Soin</p>
+                        <p class="card-text"><b>Date:</b> 12/08/2025</p>
+                        <p class="card-text rac mb-3"><b>Description:</b> Réalisation des soins infirmiers, distribution
+                            des médicaments, surveillance de l’état de santé des patients et travail en équipe
+                            pluridisciplinaire.</p>
+                        <a href="https://emplois.be.indeed.com/q-infirmier-emplois.html" class="btn btn-turq-ml w-100"
+                            target="_blank">En savoir plus</a>
+                    </div>
+                </div>
+            </div>
 
-        <!-- Carte n°1 -->
-        <div class="col-md-6 col-lg-3">
-            <div class="card mb-3 bg-light shadow-sm rounded border-3 border-prune">
-                <img src="../assets/images/aide_soignant.png" class="card-img-top" alt="Logo Mission Locale Saint-Gilles">
+            <!-- Carte n°3 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card mb-3 bg-light shadow-sm rounded border-3 border-prune">
+                    <img src="../assets/images/educ.png" class="card-img-top" alt="Logo Mission Locale Saint-Gilles">
+                    <div class="card-body">
+                        <h5 class="card-title rac" title="Éducateur·trice spécialisé·e">Éducateur·trice spécialisé·e
+                        </h5>
+                        <p class="card-text"><span>Salaire:</span> 2250 € brut</p>
+                        <p class="card-text"><b>Secteur:</b> Aide et Soin</p>
+                        <p class="card-text"><b>Date:</b> 15/08/2025</p>
+                        <p class="card-text rac mb-3"><b>Description:</b> Accompagnement de personnes en difficulté,
+                            organisation d’activités éducatives et sociales, soutien au développement de l’autonomie et
+                            travail en équipe pluridisciplinaire.</p>
+                        <a href="https://emplois.be.indeed.com/q-éducateur-spécialisé-emplois.html"
+                            class="btn btn-turq-ml w-100" target="_blank">En savoir plus</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Carte n°4 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card mb-3 bg-light shadow-sm rounded border-3 border-prune">
+                    <img src="../assets/images/menage.png" class="card-img-top" alt="Logo Mission Locale Saint-Gilles">
+                    <div class="card-body">
+                        <h5 class="card-title rac" title="Aide-ménager·ère">Aide-ménager·ère</h5>
+                        <p class="card-text"><span>Salaire:</span> 1800 € brut</p>
+                        <p class="card-text"><b>Secteur:</b> Aide et Soin</p>
+                        <p class="card-text"><b>Date:</b> 18/08/2025</p>
+                        <p class="card-text rac mb-3"><b>Description:</b> Entretien du domicile des particuliers,
+                            assistance dans les tâches ménagères quotidiennes, soutien moral, respect de la vie privée
+                            et relation de confiance avec les bénéficiaires.</p>
+                        <a href="https://emplois.be.indeed.com/q-aide-menager-emplois.html"
+                            class="btn btn-turq-ml w-100" target="_blank">En savoir plus</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cartes version mobile  -->
+        <div class="d-block d-md-none mb-3 g-3 my-3">
+
+            <!-- Carte mobile 1 -->
+            <div class="card mb-3 bg-light shadow-sm border-3 border-prune">
                 <div class="card-body">
-                    <h5 class="card-title rac" title="Aide-soignant·e">Aide-soignant·e</h5>
+                    <h5 class="card-title">Aide-soignant·e</h5>
                     <p class="card-text"><span>Salaire:</span> 2100 € brut</p>
                     <p class="card-text"><b>Secteur:</b> Aide et Soin</p>
                     <p class="card-text"><b>Date:</b> 10/08/2025</p>
-                    <p class="card-text rac mb-3"><b>Description:</b> Accompagnement des patients dans les soins quotidiens, aide à la mobilité, soutien moral et collaboration avec l’équipe de soins.</p>
-                    <a href="https://emplois.be.indeed.com/q-aide-soignant-emplois.html" class="btn btn-turq-ml w-100" target="_blank">En savoir plus</a>
+                    <p class="card-text mb-3"><b>Description:</b> Accompagnement des patients dans les soins quotidiens,
+                        aide à la mobilité, soutien moral et collaboration avec l’équipe de soins.</p>
+                    <a href="https://emplois.be.indeed.com/q-aide-soignant-emplois.html" class="btn btn-turq-ml w-100"
+                        target="_blank">En savoir plus</a>
                 </div>
             </div>
-        </div>
-
-        <!-- Carte n°2 -->
-        <div class="col-md-6 col-lg-3">
-            <div class="card mb-3 bg-light shadow-sm rounded border-3 border-prune">
-                <img src="../assets/images/infirmier.png" class="card-img-top" alt="Logo Mission Locale Saint-Gilles">
+            <!-- Carte mobile 2 -->
+            <div class="card mb-3 bg-light shadow-sm border-3 border-prune">
                 <div class="card-body">
-                    <h5 class="card-title rac" title="Infirmier·ère">Infirmier·ère</h5>
+                    <h5 class="card-title">Infirmier·ère</h5>
                     <p class="card-text"><span>Salaire:</span> 2500 € brut</p>
                     <p class="card-text"><b>Secteur:</b> Aide et Soin</p>
                     <p class="card-text"><b>Date:</b> 12/08/2025</p>
-                    <p class="card-text rac mb-3"><b>Description:</b> Réalisation des soins infirmiers, distribution des médicaments, surveillance de l’état de santé des patients et travail en équipe pluridisciplinaire.</p>
-                    <a href="https://emplois.be.indeed.com/q-infirmier-emplois.html" class="btn btn-turq-ml w-100" target="_blank">En savoir plus</a>
+                    <p class="card-text mb-3"><b>Description:</b> Réalisation des soins infirmiers, distribution des
+                        médicaments, surveillance de l’état de santé des patients et travail en équipe
+                        pluridisciplinaire.</p>
+                    <a href="https://emplois.be.indeed.com/q-infirmier-emplois.html" class="btn btn-turq-ml w-100"
+                        target="_blank">En savoir plus</a>
                 </div>
             </div>
-        </div>
-
-        <!-- Carte n°3 -->
-        <div class="col-md-6 col-lg-3">
-            <div class="card mb-3 bg-light shadow-sm rounded border-3 border-prune">
-                <img src="../assets/images/educ.png" class="card-img-top" alt="Logo Mission Locale Saint-Gilles">
+            <!-- Carte mobile 3 -->
+            <div class="card mb-3 bg-light shadow-sm border-3 border-prune">
                 <div class="card-body">
-                    <h5 class="card-title rac" title="Éducateur·trice spécialisé·e">Éducateur·trice spécialisé·e</h5>
+                    <h5 class="card-title">Éducateur·trice spécialisé·e</h5>
                     <p class="card-text"><span>Salaire:</span> 2250 € brut</p>
                     <p class="card-text"><b>Secteur:</b> Aide et Soin</p>
                     <p class="card-text"><b>Date:</b> 15/08/2025</p>
-                    <p class="card-text rac mb-3"><b>Description:</b> Accompagnement de personnes en difficulté, organisation d’activités éducatives et sociales, soutien au développement de l’autonomie et travail en équipe pluridisciplinaire.</p>
-                    <a href="https://emplois.be.indeed.com/q-éducateur-spécialisé-emplois.html" class="btn btn-turq-ml w-100" target="_blank">En savoir plus</a>
+                    <p class="card-text mb-3"><b>Description:</b> Accompagnement de personnes en difficulté,
+                        organisation d’activités éducatives et sociales, soutien au développement de l’autonomie et
+                        travail en équipe pluridisciplinaire.</p>
+                    <a href="https://emplois.be.indeed.com/q-éducateur-spécialisé-emplois.html"
+                        class="btn btn-turq-ml w-100" target="_blank">En savoir plus</a>
                 </div>
-
             </div>
-        </div>
-
-        <!-- Carte n°4 -->
-        <div class="col-md-6 col-lg-3">
-            <div class="card mb-3 bg-light shadow-sm rounded border-3 border-prune">
-                <img src="../assets/images/menage.png" class="card-img-top" alt="Logo Mission Locale Saint-Gilles">
+            <!-- Carte mobile 4 -->
+            <div class="card mb-3 bg-light shadow-sm border-3 border-prune">
                 <div class="card-body">
-                    <h5 class="card-title rac" title="Aide-ménager·ère">Aide-ménager·ère</h5>
+                    <h5 class="card-title">Aide-ménager·ère</h5>
                     <p class="card-text"><span>Salaire:</span> 1800 € brut</p>
                     <p class="card-text"><b>Secteur:</b> Aide et Soin</p>
                     <p class="card-text"><b>Date:</b> 18/08/2025</p>
-                    <p class="card-text rac mb-3"><b>Description:</b> Entretien du domicile des particuliers, assistance dans les tâches ménagères quotidiennes, soutien moral, respect de la vie privée et relation de confiance avec les bénéficiaires.</p>
-                    <a href="https://emplois.be.indeed.com/q-aide-menager-emplois.html" class="btn btn-turq-ml w-100" target="_blank">En savoir plus</a>
+                    <p class="card-text mb-3"><b>Description:</b> Entretien du domicile des particuliers, assistance
+                        dans les tâches ménagères quotidiennes, soutien moral, respect de la vie privée et relation de
+                        confiance avec les bénéficiaires.</p>
+                    <a href="https://emplois.be.indeed.com/q-aide-menager-emplois.html" class="btn btn-turq-ml w-100"
+                        target="_blank">En savoir plus</a>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Cartes version mobile  -->
-    <div class="d-block d-md-none mb-3 g-3 my-3">
+    <div id="batiment"
+        class="secteur-block container border border-3 border-light rounded my-5 mx-auto bg-light shadow-lg">
+        <h3 class="text-center mt-3">Offres d'emploi - Secteur Bâtiment</h3>
+        <!-- Grille de cartes - Ordinateur et tablettes -->
+        <div class="row rounded mb-3 g-3 my-3 d-none d-md-flex">
 
-        <!-- Carte mobile 1 -->
-        <div class="card mb-3 bg-light shadow-sm border-3 border-prune">
-            <div class="card-body">
-                <h5 class="card-title">Aide-soignant·e</h5>
-                <p class="card-text"><span>Salaire:</span> 2100 € brut</p>
-                <p class="card-text"><b>Secteur:</b> Aide et Soin</p>
-                <p class="card-text"><b>Date:</b> 10/08/2025</p>
-                <p class="card-text mb-3"><b>Description:</b> Accompagnement des patients dans les soins quotidiens, aide à la mobilité, soutien moral et collaboration avec l’équipe de soins.</p>
-                <a href="https://emplois.be.indeed.com/q-aide-soignant-emplois.html" class="btn btn-turq-ml w-100" target="_blank">En savoir plus</a>
+            <!-- Carte n°1 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card mb-3 bg-light shadow-sm rounded border-3 border-prune">
+                    <img src="../assets/images/macon.jpg" class="card-img-top" alt="Logo Mission Locale Saint-Gilles">
+                    <div class="card-body">
+                        <h5 class="card-title rac" title="Maçon·ne">Maçon·ne</h5>
+                        <p class="card-text"><span>Salaire:</span> 2100 € brut</p>
+                        <p class="card-text"><b>Secteur:</b> Bâtiment</p>
+                        <p class="card-text"><b>Date:</b> 11/08/2024</p>
+                        <p class="card-text rac mb-3"><b>Description:</b> Réalisation de travaux de maçonnerie (murs,
+                            dalles, fondations), respect des plans, travail en équipe sur des chantiers de construction
+                            ou de rénovation.</p>
+                        <a href="https://emplois.be.indeed.com/q-maçon-emplois.html" class="btn btn-turq-ml w-100"
+                            target="_blank">En savoir plus</a>
+                    </div>
+                </div>
             </div>
-        </div>
-        <!-- Carte mobile 2 -->
-        <div class="card mb-3 bg-light shadow-sm border-3 border-prune">
-            <div class="card-body">
-                <h5 class="card-title">Infirmier·ère</h5>
-                <p class="card-text"><span>Salaire:</span> 2500 € brut</p>
-                <p class="card-text"><b>Secteur:</b> Aide et Soin</p>
-                <p class="card-text"><b>Date:</b> 12/08/2025</p>
-                <p class="card-text mb-3"><b>Description:</b> Réalisation des soins infirmiers, distribution des médicaments, surveillance de l’état de santé des patients et travail en équipe pluridisciplinaire.</p>
-                <a href="https://emplois.be.indeed.com/q-infirmier-emplois.html" class="btn btn-turq-ml w-100" target="_blank">En savoir plus</a>
-            </div>
-        </div>
-        <!-- Carte mobile 3 -->
-        <div class="card mb-3 bg-light shadow-sm border-3 border-prune">
-            <div class="card-body">
-                <h5 class="card-title">Éducateur·trice spécialisé·e</h5>
-                <p class="card-text"><span>Salaire:</span> 2250 € brut</p>
-                <p class="card-text"><b>Secteur:</b> Aide et Soin</p>
-                <p class="card-text"><b>Date:</b> 15/08/2025</p>
-                <p class="card-text mb-3"><b>Description:</b> Accompagnement de personnes en difficulté, organisation d’activités éducatives et sociales, soutien au développement de l’autonomie et travail en équipe pluridisciplinaire.</p>
-                <a href="https://emplois.be.indeed.com/q-éducateur-spécialisé-emplois.html" class="btn btn-turq-ml w-100" target="_blank">En savoir plus</a>
-            </div>
-        </div>
-        <!-- Carte mobile 4 -->
-        <div class="card mb-3 bg-light shadow-sm border-3 border-prune">
-            <div class="card-body">
-                <h5 class="card-title">Aide-ménager·ère</h5>
-                <p class="card-text"><span>Salaire:</span> 1800 € brut</p>
-                <p class="card-text"><b>Secteur:</b> Aide et Soin</p>
-                <p class="card-text"><b>Date:</b> 18/08/2025</p>
-                <p class="card-text mb-3"><b>Description:</b> Entretien du domicile des particuliers, assistance dans les tâches ménagères quotidiennes, soutien moral, respect de la vie privée et relation de confiance avec les bénéficiaires.</p>
-                <a href="https://emplois.be.indeed.com/q-aide-menager-emplois.html" class="btn btn-turq-ml w-100" target="_blank">En savoir plus</a>
-            </div>
-        </div>
-    </div>
-</div>
 
-<div id="batiment" class="secteur-block container border border-3 border-light rounded my-5 mx-auto bg-light shadow-lg">
-    <h3 class="text-center mt-3">Offres d'emploi - Secteur Bâtiment</h3>
-    <!-- Grille de cartes - Ordinateur et tablettes -->
-    <div class="row rounded mb-3 g-3 my-3 d-none d-md-flex">
+            <!-- Carte n°2 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card mb-3 bg-light shadow-sm rounded border-3 border-prune">
+                    <img src="../assets/images/elec2.png" class="card-img-top" alt="Logo Mission Locale Saint-Gilles">
+                    <div class="card-body">
+                        <h5 class="card-title rac" title="Électricien·ne du bâtiment">Électricien·ne du bâtiment</h5>
+                        <p class="card-text"><span>Salaire:</span> 2250 € brut</p>
+                        <p class="card-text"><b>Secteur:</b> Bâtiment</p>
+                        <p class="card-text"><b>Date:</b> 17/08/2025</p>
+                        <p class="card-text rac mb-3"><b>Description:</b> Installation et maintenance d’installations
+                            électriques sur chantiers. Lecture de plans, respect des normes de sécurité.</p>
+                        <a href="https://emplois.be.indeed.com/q-électricien-bâtiment-emplois.html"
+                            class="btn btn-turq-ml w-100" target="_blank">En savoir plus</a>
+                    </div>
+                </div>
+            </div>
 
-        <!-- Carte n°1 -->
-        <div class="col-md-6 col-lg-3">
-            <div class="card mb-3 bg-light shadow-sm rounded border-3 border-prune">
-                <img src="../assets/images/macon.jpg" class="card-img-top" alt="Logo Mission Locale Saint-Gilles">
+            <!-- Carte n°3 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card mb-3 bg-light shadow-sm rounded border-3 border-prune">
+                    <img src="../assets/images/plombier.png" class="card-img-top"
+                        alt="Logo Mission Locale Saint-Gilles">
+                    <div class="card-body">
+                        <h5 class="card-title rac" title="Plombier·ère chauffagiste">Plombier·ère chauffagiste</h5>
+                        <p class="card-text"><span>Salaire:</span> 2300 € brut</p>
+                        <p class="card-text"><b>Secteur:</b> Bâtiment</p>
+                        <p class="card-text"><b>Date:</b> 18/08/2025</p>
+                        <p class="card-text rac mb-3"><b>Description:</b> Installation, entretien et réparation des
+                            systèmes sanitaires et chauffage. Lecture de plans, respect des consignes de sécurité.</p>
+                        <a href="https://emplois.be.indeed.com/q-plombier-chauffagiste-emplois.html"
+                            class="btn btn-turq-ml w-100" target="_blank">En savoir plus</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carte n°4 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card mb-3 bg-light shadow-sm rounded border-3 border-prune">
+                    <img src="../assets/images/peintre.jpg" class="card-img-top" alt="Logo Mission Locale Saint-Gilles">
+                    <div class="card-body">
+                        <h5 class="card-title rac" title="Peintre en bâtiment">Peintre en bâtiment</h5>
+                        <p class="card-text"><span>Salaire:</span> 2000 € brut</p>
+                        <p class="card-text"><b>Secteur:</b> Bâtiment</p>
+                        <p class="card-text"><b>Date:</b> 21/08/2025</p>
+                        <p class="card-text rac mb-3"><b>Description:</b> Préparation des supports, application de
+                            peintures, vernis et revêtements muraux sur différents types de surfaces.</p>
+                        <a href="https://emplois.be.indeed.com/q-peintre-bâtiment-emplois.html"
+                            class="btn btn-turq-ml w-100" target="_blank">En savoir plus</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cartes version mobile  -->
+        <div class="d-block d-md-none mb-3 g-3 my-3">
+
+            <!-- Carte mobile 1 -->
+            <div class="card mb-3 bg-light shadow-sm border-3 border-prune">
                 <div class="card-body">
-                    <h5 class="card-title rac" title="Maçon·ne">Maçon·ne</h5>
+                    <h5 class="card-title">Maçon·ne</h5>
                     <p class="card-text"><span>Salaire:</span> 2100 € brut</p>
                     <p class="card-text"><b>Secteur:</b> Bâtiment</p>
                     <p class="card-text"><b>Date:</b> 11/08/2024</p>
-                    <p class="card-text rac mb-3"><b>Description:</b> Réalisation de travaux de maçonnerie (murs, dalles, fondations), respect des plans, travail en équipe sur des chantiers de construction ou de rénovation.</p>
-                    <a href="https://emplois.be.indeed.com/q-maçon-emplois.html" class="btn btn-turq-ml w-100" target="_blank">En savoir plus</a>
+                    <p class="card-text mb-3"><b>Description:</b> Réalisation de travaux de maçonnerie (murs, dalles,
+                        fondations), respect des plans, travail en équipe sur des chantiers de construction ou de
+                        rénovation, respect strict des normes de sécurité.</p>
+                    <a href="https://emplois.be.indeed.com/q-maçon-emplois.html" class="btn btn-turq-ml w-100"
+                        target="_blank">En savoir plus</a>
                 </div>
             </div>
-        </div>
-
-        <!-- Carte n°2 -->
-        <div class="col-md-6 col-lg-3">
-            <div class="card mb-3 bg-light shadow-sm rounded border-3 border-prune">
-                <img src="../assets/images/elec2.png" class="card-img-top" alt="Logo Mission Locale Saint-Gilles">
+            <!-- Carte mobile 2 -->
+            <div class="card mb-3 bg-light shadow-sm border-3 border-prune">
                 <div class="card-body">
-                    <h5 class="card-title rac" title="Électricien·ne du bâtiment">Électricien·ne du bâtiment</h5>
+                    <h5 class="card-title">Électricien·ne du bâtiment</h5>
                     <p class="card-text"><span>Salaire:</span> 2250 € brut</p>
                     <p class="card-text"><b>Secteur:</b> Bâtiment</p>
-                    <p class="card-text"><b>Date:</b> 17/08/2025</p>
-                    <p class="card-text rac mb-3"><b>Description:</b> Installation et maintenance d’installations électriques sur chantiers. Lecture de plans, respect des normes de sécurité.</p>
-                    <a href="https://emplois.be.indeed.com/q-électricien-bâtiment-emplois.html" class="btn btn-turq-ml w-100" target="_blank">En savoir plus</a>
+                    <p class="card-text"><b>Date:</b> 17/08/2024</p>
+                    <p class="card-text mb-3"><b>Description:</b> Installation, maintenance et dépannage de réseaux
+                        électriques dans des bâtiments neufs ou en rénovation. Lecture de plans, respect des normes de
+                        sécurité, travail en équipe sur chantier.</p>
+                    <a href="https://emplois.be.indeed.com/q-électricien-bâtiment-emplois.html"
+                        class="btn btn-turq-ml w-100" target="_blank">En savoir plus</a>
                 </div>
             </div>
-        </div>
-
-        <!-- Carte n°3 -->
-        <div class="col-md-6 col-lg-3">
-            <div class="card mb-3 bg-light shadow-sm rounded border-3 border-prune">
-                <img src="../assets/images/plombier.png" class="card-img-top" alt="Logo Mission Locale Saint-Gilles">
+            <!-- Carte mobile 3 -->
+            <div class="card mb-3 bg-light shadow-sm border-3 border-prune">
                 <div class="card-body">
-                    <h5 class="card-title rac" title="Plombier·ère chauffagiste">Plombier·ère chauffagiste</h5>
+                    <h5 class="card-title">Plombier·ère chauffagiste</h5>
                     <p class="card-text"><span>Salaire:</span> 2300 € brut</p>
                     <p class="card-text"><b>Secteur:</b> Bâtiment</p>
                     <p class="card-text"><b>Date:</b> 18/08/2025</p>
-                    <p class="card-text rac mb-3"><b>Description:</b> Installation, entretien et réparation des systèmes sanitaires et chauffage. Lecture de plans, respect des consignes de sécurité.</p>
-                    <a href="https://emplois.be.indeed.com/q-plombier-chauffagiste-emplois.html" class="btn btn-turq-ml w-100" target="_blank">En savoir plus</a>
+                    <p class="card-text mb-3"><b>Description:</b> Installation, entretien et réparation des systèmes de
+                        plomberie et de chauffage. Lecture de plans, dépannage d’installations sanitaires ou de
+                        chauffage, intervention sur chantiers résidentiels et tertiaires, respect des consignes de
+                        sécurité.</p>
+                    <a href="https://emplois.be.indeed.com/q-plombier-chauffagiste-emplois.html"
+                        class="btn btn-turq-ml w-100" target="_blank">En savoir plus</a>
                 </div>
             </div>
-        </div>
-
-        <!-- Carte n°4 -->
-        <div class="col-md-6 col-lg-3">
-            <div class="card mb-3 bg-light shadow-sm rounded border-3 border-prune">
-                <img src="../assets/images/peintre.jpg" class="card-img-top" alt="Logo Mission Locale Saint-Gilles">
+            <!-- Carte mobile 4 -->
+            <div class="card mb-3 bg-light shadow-sm border-3 border-prune">
                 <div class="card-body">
-                    <h5 class="card-title rac" title="Peintre en bâtiment">Peintre en bâtiment</h5>
+                    <h5 class="card-title">Peintre en bâtiment</h5>
                     <p class="card-text"><span>Salaire:</span> 2000 € brut</p>
                     <p class="card-text"><b>Secteur:</b> Bâtiment</p>
                     <p class="card-text"><b>Date:</b> 21/08/2025</p>
-                    <p class="card-text rac mb-3"><b>Description:</b> Préparation des supports, application de peintures, vernis et revêtements muraux sur différents types de surfaces.</p>
-                    <a href="https://emplois.be.indeed.com/q-peintre-bâtiment-emplois.html" class="btn btn-turq-ml w-100" target="_blank">En savoir plus</a>
+                    <p class="card-text mb-3"><b>Description:</b> Préparation des supports, application de peintures,
+                        vernis et revêtements muraux sur différents types de surfaces. Travail en intérieur et
+                        extérieur, respect des délais et des normes de sécurité sur chantier.</p>
+                    <a href="https://emplois.be.indeed.com/q-peintre-bâtiment-emplois.html"
+                        class="btn btn-turq-ml w-100" target="_blank">En savoir plus</a>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Cartes version mobile  -->
-    <div class="d-block d-md-none mb-3 g-3 my-3">
-
-        <!-- Carte mobile 1 -->
-        <div class="card mb-3 bg-light shadow-sm border-3 border-prune">
-            <div class="card-body">
-                <h5 class="card-title">Maçon·ne</h5>
-                <p class="card-text"><span>Salaire:</span> 2100 € brut</p>
-                <p class="card-text"><b>Secteur:</b> Bâtiment</p>
-                <p class="card-text"><b>Date:</b> 11/08/2024</p>
-                <p class="card-text mb-3"><b>Description:</b> Réalisation de travaux de maçonnerie (murs, dalles, fondations), respect des plans, travail en équipe sur des chantiers de construction ou de rénovation, respect strict des normes de sécurité.</p>
-                <a href="https://emplois.be.indeed.com/q-maçon-emplois.html" class="btn btn-turq-ml w-100" target="_blank">En savoir plus</a>
-            </div>
-        </div>
-        <!-- Carte mobile 2 -->
-        <div class="card mb-3 bg-light shadow-sm border-3 border-prune">
-            <div class="card-body">
-                <h5 class="card-title">Électricien·ne du bâtiment</h5>
-                <p class="card-text"><span>Salaire:</span> 2250 € brut</p>
-                <p class="card-text"><b>Secteur:</b> Bâtiment</p>
-                <p class="card-text"><b>Date:</b> 17/08/2024</p>
-                <p class="card-text mb-3"><b>Description:</b> Installation, maintenance et dépannage de réseaux électriques dans des bâtiments neufs ou en rénovation. Lecture de plans, respect des normes de sécurité, travail en équipe sur chantier.</p>
-                <a href="https://emplois.be.indeed.com/q-électricien-bâtiment-emplois.html" class="btn btn-turq-ml w-100" target="_blank">En savoir plus</a>
-            </div>
-        </div>
-        <!-- Carte mobile 3 -->
-        <div class="card mb-3 bg-light shadow-sm border-3 border-prune">
-            <div class="card-body">
-                <h5 class="card-title">Plombier·ère chauffagiste</h5>
-                <p class="card-text"><span>Salaire:</span> 2300 € brut</p>
-                <p class="card-text"><b>Secteur:</b> Bâtiment</p>
-                <p class="card-text"><b>Date:</b> 18/08/2025</p>
-                <p class="card-text mb-3"><b>Description:</b> Installation, entretien et réparation des systèmes de plomberie et de chauffage. Lecture de plans, dépannage d’installations sanitaires ou de chauffage, intervention sur chantiers résidentiels et tertiaires, respect des consignes de sécurité.</p>
-                <a href="https://emplois.be.indeed.com/q-plombier-chauffagiste-emplois.html" class="btn btn-turq-ml w-100" target="_blank">En savoir plus</a>
-            </div>
-        </div>
-        <!-- Carte mobile 4 -->
-        <div class="card mb-3 bg-light shadow-sm border-3 border-prune">
-            <div class="card-body">
-                <h5 class="card-title">Peintre en bâtiment</h5>
-                <p class="card-text"><span>Salaire:</span> 2000 € brut</p>
-                <p class="card-text"><b>Secteur:</b> Bâtiment</p>
-                <p class="card-text"><b>Date:</b> 21/08/2025</p>
-                <p class="card-text mb-3"><b>Description:</b> Préparation des supports, application de peintures, vernis et revêtements muraux sur différents types de surfaces. Travail en intérieur et extérieur, respect des délais et des normes de sécurité sur chantier.</p>
-                <a href="https://emplois.be.indeed.com/q-peintre-bâtiment-emplois.html" class="btn btn-turq-ml w-100" target="_blank">En savoir plus</a>
-            </div>
-        </div>
-    </div>
-</div>
 
 
+    <!-- FOOTER -->
 
-<!-- FOOTER -->
 
+    <!-- Scripts -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-<!-- Scripts -->
-<!-- Bootstrap core JavaScript -->
-<script src="../vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/isotope.min.js"></script>
+    <script src="../assets/js/owl-carousel.js"></script>
+    <script src="../assets/js/lightbox.js"></script>
+    <script src="../assets/js/tabs.js"></script>
+    <script src="../assets/js/video.js"></script>
+    <script src="../assets/js/slick-slider.js"></script>
+    <script src="../assets/js/custom.js"></script>
+    <script>
+        $(document).ready(function () {
+            function afficherSecteur(selection) {
+                $('.secteur-block').each(function () {
+                    if (selection === 'all' || $(this).attr('id') === selection) {
+                        $(this).show();
+                    } else {
+                        $(this).hide();
+                    }
+                });
+            }
+            // Affichage initial selon la valeur sélectionnée
+            afficherSecteur($('#secteurSelect').val());
 
-<script src="../assets/js/isotope.min.js"></script>
-<script src="../assets/js/owl-carousel.js"></script>
-<script src="../assets/js/lightbox.js"></script>
-<script src="../assets/js/tabs.js"></script>
-<script src="../assets/js/video.js"></script>
-<script src="../assets/js/slick-slider.js"></script>
-<script src="../assets/js/custom.js"></script>
-<script>
-    $(document).ready(function() {
-        function afficherSecteur(selection) {
-            $('.secteur-block').each(function() {
-                if (selection === 'all' || $(this).attr('id') === selection) {
-                    $(this).show();
-                } else {
-                    $(this).hide();
-                }
+            // Quand on change la sélection
+            $('#secteurSelect').on('change', function () {
+                afficherSecteur($(this).val());
             });
-        }
-        // Affichage initial selon la valeur sélectionnée
-        afficherSecteur($('#secteurSelect').val());
-
-        // Quand on change la sélection
-        $('#secteurSelect').on('change', function() {
-            afficherSecteur($(this).val());
         });
-    });
-</script>
+    </script>
+    <script>
+        $(function () {
+            $(".back-to-top").click(function () {
+                $('html, body').animate({ scrollTop: 0 }, 800);
+                return false;
+            });
+        });
+
+
+
+
+        $(function () {
+            $(`#active`).css({ 'font-weight': 'bold' })
+        })
+    </script>
 </body>
+
 </html>

@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="../assets/css/templatemo-edu-meeting.css">
     <link rel="stylesheet" href="../assets/css/owl.css">
     <link rel="stylesheet" href="../assets/css/lightbox.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 <!--
 
 TemplateMo 569 Edu Meeting
@@ -826,6 +827,21 @@ https://templatemo.com/tm-569-edu-meeting
         $(window).scroll(function () {
           checkSection();
         });
+    </script>
+        <script>
+        $(function () {
+            $(".back-to-top").click(function () {
+                $('html, body').animate({ scrollTop: 0 }, 800);
+                return false;
+            });
+        });
+
+
+
+
+        $(function () {
+            $(`#active`).css({ 'font-weight': 'bold' })
+        })
     </script>
 </body>
 
