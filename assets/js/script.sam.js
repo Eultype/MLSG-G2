@@ -66,7 +66,7 @@ $(document).ready(function() {
         });
     }
 
-// Détecte si la section est visible à l'écran (avec un simple scroll listener)
+    // Détecte si la section est visible à l'écran (avec un simple scroll listener)
     function isElementInViewport(el) {
         const rect = el.get(0).getBoundingClientRect();
         return (
@@ -75,7 +75,7 @@ $(document).ready(function() {
         );
     }
 
-// Lancer l’animation une seule fois au premier scroll sur la section
+    // Lancer l’animation une seule fois au premier scroll sur la section
     let partenairesAnimated = false;
     $(window).on('scroll load', function() {
         const $section = $('.partenaire-anim').first().parent().parent(); // remonte à la section
