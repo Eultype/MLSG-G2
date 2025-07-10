@@ -46,21 +46,21 @@
     <div class="row justify-content-center rounded mb-3">
         <!-- Colonne gauche : Coordonnées/Infos Mission Locale -->
         <div class="col-12 col-lg-6 contact-block d-flex flex-column justify-content-center align-items-center text-center position-relative py-5 order-2 order-lg-1">
-            <h3>📞 Appelez-nous</h3>
+            <h3 class="mb-1">📞 Appelez-nous</h3>
             <p class="text-turq-ml fw-bold mb-3">
                 Tel: 02 542 63 21<br>
                 GSM: 0476/68.07.93
             </p>
-            <h3>✉️ Support général</h3>
+            <h3 class="mb-1">✉️ Support général</h3>
             <p id="mail" class="text-turq-ml fw-bold mb-3">contact@mlsg.be</p>
-            <h3>⏰ Horaires d'ouvertures</h3>
+            <h3 class="mb-1">⏰ Horaires d'ouvertures</h3>
             <p class="text-turq-ml fw-bold mb-3">
                 Tous les jours de 8h30h à 12h00 et de 13h00 à 16h00.<br>
                 Fermé le mercredi toute la journée.
             </p>
-            <h3>📍 Adresse</h3>
+            <h3 class="mb-1">📍 Adresse</h3>
             <p id="adresse" class="text-turq-ml fw-bold mb-3">Chaussée de Waterloo 255 (2e étage) - 1060 Saint-Gilles</p>
-            <h3>🚌 Accèssibilité</h3>
+            <h3 class="mb-1">🚌 Accèssibilité</h3>
             <p class="text-turq-ml fw-bold mb-3">
                 Accès STIB : Tram 3, 4 et 51 (arrêt Horta)<br>
                 Tram 81, 92 et 97 (arrêts Moris ou Lombardie)<br>
@@ -70,7 +70,8 @@
 
         <!-- Colonne droite : Formulaire de contact -->
         <div class="col-12 col-lg-6 py-5 order-1 order-lg-2">
-            <h3 class="text-center my-3">Contactez la Mission Locale</h3>
+            <h3 class="text-center my-2">Contactez la Mission Locale</h3>
+            <p class="text-center mb-3">Remplissez ce formulaire et nous vous recontacterons dans les plus brefs délais.</p>
             <div class="verifMessage px-3 text-center my-1">
                 <div id="verifEmail"></div>
                 <div id="verifTel"></div>
@@ -95,20 +96,28 @@
                     <input type="email" class="form-control" id="email" placeholder="exemple@email.com" required>
                 </div>
 
-                <div class="row">
-                    <div class="col-sm-6 mb-3">
+                <div class="row mb-4">
+                    <div class="col-sm-6">
                         <label for="telephone" class="form-label">Téléphone</label>
                         <input type="text" class="form-control" id="telephone" placeholder="04 00 00 00 00" required>
                     </div>
-                    <div class="col-sm-6 mb-3">
+                    <div class="col-sm-6">
                         <label for="codepostal" class="form-label">Code postal</label>
                         <input type="text" class="form-control" id="codepostal" placeholder="0000" required>
                     </div>
                 </div>
 
                 <div class="mb-3">
-                    <label for="sujet" class="form-label">Sujet</label>
-                    <input type="text" class="form-control" id="sujet" placeholder="Votre sujet" required>
+                    <label for="select" class="form-label">Type de demande</label>
+                    <select id="select" name="sujet" class="form-select">
+                        <option selected>Sélectionnez une option</option>
+                        <option value="orientation">Orientation professionnelle</option>
+                        <option value="formation">Demande de formation</option>
+                        <option value="emploi">Recherche d'emploi</option>
+                        <option value="partenaire">Partenaire entreprise</option>
+                        <option value="autre">Autre demande</option>
+                    </select>
+
                 </div>
 
                 <div class="mb-3">
