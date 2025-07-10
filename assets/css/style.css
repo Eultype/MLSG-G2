@@ -12,6 +12,10 @@
     color: rgb(0, 168, 159) !important;
 }
 
+.change:hover {
+    background-color: rgb(227, 0, 86) ;
+}
+
 .footer {
     background-color: #1a1a1a;
     color: #fff;
@@ -23,7 +27,8 @@
 }
 
 .footer a:hover {
-    color: rgb(0, 168, 159);
+    /* color: rgb(227, 0, 86); */
+    color: rgb(126, 44, 92) ;
 }
 
 .footer-links {
