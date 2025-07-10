@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="../assets/css/owl.css">
   <link rel="stylesheet" href="../assets/css/lightbox.css">
   <link rel="stylesheet" href="../assets/css/style.sam.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body class="pt-5">
 <!-- Navbar -->
@@ -25,13 +26,13 @@
 <!-- Hero Section -->
 <div class="hero-section d-flex align-items-center justify-content-center text-white my-5">
   <div class="container text-center">
-    <h1 class="text-white fw-bold mb-4 display-5">
+    <h1 id="hero_title" class="text-white fw-bold mb-4 display-5">
       Construisez votre avenir professionnel avec la Mission&nbsp;Locale de Saint&#8209;Gilles
     </h1>
-    <p class="text-white fs-4 mb-5 mx-auto">
+    <p id="hero_text" class="text-white fs-4 mb-5 mx-auto">
       Un accompagnement gratuit, humain et personnalisé vers l'emploi ou la formation.
     </p>
-    <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+    <div id="hero_btn" class="d-flex flex-column flex-sm-row justify-content-center gap-3">
       <a href="contact.html" class="btn btn-framboise rounded-pill fs-5 fw-bold">
         Prendre rendez-vous
       </a>
@@ -152,7 +153,7 @@
     <div class="row g-4">
       <!-- Témoignage 1 -->
       <div class="col-12 col-lg-4">
-        <div class="bg-white p-4 rounded shadow h-100 d-flex flex-column">
+        <div class="bg-white p-4 rounded shadow h-100 d-flex flex-column anim-testimonials">
           <div class="mb-3 text-warning fs-5">
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
@@ -177,7 +178,7 @@
 
       <!-- Témoignage 2 -->
       <div class="col-12 col-lg-4">
-        <div class="bg-white p-4 rounded shadow h-100 d-flex flex-column">
+        <div class="bg-white p-4 rounded shadow h-100 d-flex flex-column anim-testimonials">
           <div class="mb-3 text-warning fs-5">
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
@@ -202,7 +203,7 @@
 
       <!-- Témoignage 3 -->
       <div class="col-12 col-lg-4">
-        <div class="bg-white p-4 rounded shadow h-100 d-flex flex-column">
+        <div class="bg-white p-4 rounded shadow h-100 d-flex flex-column anim-testimonials">
           <div class="mb-3 text-warning fs-5">
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
@@ -228,8 +229,131 @@
   </div>
 </div>
 
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="row m-auto">
+      <div class="col-md-3">
+        <div class="footer-brand">
+          <img src="/assets/images/logo(blanc).png" style="width: 105px; height: 105px;"
+               alt="Ataraxis Logo">
+        </div>
+        <br>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/missionlocaledesaintgilles?fref=ts" target="_blank"><img
+                  src="/assets/images/facebook-.png" class="rounded" style="width: 35px; height: 35px;"
+                  alt=""></a>
+          <a href="https://www.youtube.com/channel/UC-_2jO4Bw7PqM5k00sGFdgA" target="_blank"><img
+                  src="/assets/images/youtube-.png" class="rounded" style="width: 35px; height: 35px;"
+                  alt=""></a>
+          <a href="https://www.instagram.com/missionlocaledesaintgilles/" target="_blank"><img
+                  src="/assets/images/instagram-.png" class="rounded" style="width: 35px; height: 35px;"
+                  alt=""></a>
+        </div>
+        <button class="back-to-top w-75">BACK TO TOP</button>
+      </div>
+      <div class="col-md-3 m-auto">
+        <ul class="footer-links">
+          <li><a href="">Site Map</a></li>
+          <li><a href="accueil.html">Accueil</a></li>
+          <li><a href="qui-sommes-nous.html">Qui sommes-nous ?</a></li>
+          <li><a href="accompagnement.html">Accompagnement</a></li>
+          <li><a href="orientation.html">Orientation</a></li>
+          <li><a href="agenda-formations.html">Agenda formations</a></li>
+          <li><a href="nos-offres-d-emplois.html">Nos offres d'emploi</a></li>
+          <li><a href="biotiful.html">Biotiful</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3 m-auto">
+        <ul class="footer-links">
+          <li><a href="#">Legal</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Services</a></li>
+          <li><a href="#">Lawyer's Corners</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3 m-auto">
+        <div class="newsletter-form">
+          <h5 class="my-2">Subscribe to our Newsletter</h5>
+          <form>
+            <div class="form-group">
+              <input type="email" class="form-control my-2 w-100" placeholder="Enter your email">
+            </div>
+            <button type="submit" class="btn my-2">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-12 text-center">
+        <p>Copyright © 2022 Edu Meeting Co., Ltd. All Rights Reserved.
+          <br>
+          Design: <a href="https://templatemo.com" target="_parent"
+                     title="free css templates" style="color:  rgb(0, 168, 159)">TemplateMo</a>
+          /
+          Distibuted By: <a href="https://themewagon.com" target="_blank" title="Build Better UI, Faster"
+                            style="color: rgb(0, 168, 159)">ThemeWagon</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
 <!-- SCRIPTS -->
-<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
 <script src="../vendor/jquery/jquery.min.js"></script>
+<script>
+  $(document).ready(function() {
+
+    $('#hero_title').css({opacity: 0, left: '-50px', position: 'relative'});
+    $('#hero_text').css({opacity: 0, right: '-50px', position: 'relative'});
+    $('#hero_btn').css({opacity: 0});
+
+    $(window).on('load', function() {
+      $('#hero_title').animate({opacity: 1, left: '0px'}, 800, function() {
+        $('#hero_text').animate({opacity: 1, right: '0px'}, 800, function() {
+          $('#hero_btn').animate({opacity: 1}, 800)
+        })
+      })
+    })
+
+    // Animation logo services
+    $('.logos img.anim-services').hover(
+            function() {
+              $(this).css({
+                "transform": "scale(1.18) rotate(-3deg)",
+                "filter": "brightness(1.08) saturate(1.15)",
+                "transition": "transform 0.3s cubic-bezier(0.4,0,0.2,1), filter 0.3s cubic-bezier(0.4,0,0.2,1)",
+                "z-index": 2
+              });
+            },
+            function() {
+              $(this).css({
+                "transform": "",
+                "filter": "",
+                "z-index": ""
+              });
+            }
+    );
+
+    // Animations témoignages
+    $('.anim-testimonials').hover(
+            function() {
+              $(this).css({
+                "transform": "scale(1.05)",
+                "transition": "transform 0.3s cubic-bezier(0.4,0,0.2,1)"
+              });
+            },
+            function() {
+              $(this).css({
+                "transform": ""
+              })
+            }
+    )
+
+  });
+</script>
 </body>
 </html>
