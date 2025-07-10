@@ -36,39 +36,41 @@
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="path_to_your_logo.png" alt="Ataraxis Logo">
+                <img src="/assets/images/logo(noir).png" style="width: 105px; height: 105px;" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
+                <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Homepage</a>
+                        <a class="nav-link" href="accueil.html">Accueil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Technology</a>
+                        <a class="nav-link" href="qui-sommes-nous.html">Qui sommes-nous ?</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Ataraxis Breast</a>
+                        <a class="nav-link" href="accompagnement.html">Accompagnement</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">News & Resources</a>
+                        <a id="active" class="nav-link" href="orientation.html">Orientation</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Careers</a>
+                        <a class="nav-link" href="nos-offres-d-emplois.html">Nos offres d'emploi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Portal</a>
+                        <a class="nav-link" href="agenda-formations.html">Agenda formations</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact Us</a>
+                        <a class="nav-link" href="biotiful.html">Biotiful</a>
                     </li>
                 </ul>
+                <a class="fw-bold text-dark" href="contact.html">Contact Us</a>
             </div>
         </div>
     </nav>
+
 
     <!-- ***** Main Banner Area Start ***** -->
     <section class="section main-banner" id="top" data-section="section1">
@@ -732,7 +734,7 @@
                                 src="/assets/images/instagram-.png" class="rounded" style="width: 35px; height: 35px;"
                                 alt=""></a>
                     </div>
-                    <button class="back-to-top w-75">BACK TO TOP</button>
+                    <button class="back-to-top w-75 text-light">BACK TO TOP</button>
                 </div>
                 <div class="col-md-3 m-auto">
                     <ul class="footer-links">
@@ -741,8 +743,8 @@
                         <li><a href="qui-sommes-nous.html">Qui sommes-nous ?</a></li>
                         <li><a href="accompagnement.html">Accompagnement</a></li>
                         <li><a href="orientation.html">Orientation</a></li>
-                        <li><a href="agenda-formations.html">Agenda formations</a></li>
                         <li><a href="nos-offres-d-emplois.html">Nos offres d'emploi</a></li>
+                        <li><a href="agenda-formations.html">Agenda formations</a></li>
                         <li><a href="biotiful.html">Biotiful</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
@@ -762,7 +764,7 @@
                             <div class="form-group">
                                 <input type="email" class="form-control my-2 w-100" placeholder="Enter your email">
                             </div>
-                            <button type="submit" class="btn my-2">Subscribe</button>
+                            <button type="submit" class="btn my-2 text-light">Subscribe</button>
                         </form>
                     </div>
                 </div>
@@ -772,8 +774,8 @@
                 <div class="col-12 text-center">
                     <p>Copyright © 2022 Edu Meeting Co., Ltd. All Rights Reserved.
                         <br>
-                        Design: <a href="https://templatemo.com" target="_parent"
-                            title="free css templates" style="color:  rgb(0, 168, 159)">TemplateMo</a>
+                        Design: <a href="https://templatemo.com" target="_parent" title="free css templates"
+                            style="color:  rgb(0, 168, 159)">TemplateMo</a>
                         /
                         Distibuted By: <a href="https://themewagon.com" target="_blank" title="Build Better UI, Faster"
                             style="color: rgb(0, 168, 159)">ThemeWagon</a>
@@ -844,11 +846,18 @@
     </script>
     <script>
         $(function () {
-            $('.back-to-top').click(function () {
+            $(".back-to-top").click(function () {
                 $('html, body').animate({ scrollTop: 0 }, 800);
                 return false;
             });
         });
+
+
+
+
+        $(function () {
+            $(`#active`).css({ 'font-weight': 'bold' })
+        })
     </script>
 </body>
 
