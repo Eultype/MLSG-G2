@@ -44,13 +44,11 @@ https://templatemo.com/tm-569-edu-meeting
     <!-- Box 1 -->
     <div class="service-box">
         <div class="service-content">
-            <div class="service-icon">
-                <i class="fas fa-briefcase"></i>
-            </div>
+            
             <h3 class="service-title">COACHING EMPLOI/FORMATION</h3>
-            <img class="w-75 img-fluid mb-4" src="../assets/images/coaching.jpg" alt="Présentation de la MLSG"
+            <img class="w-75 img-fluid mb-5" src="../assets/images/coaching.jpg" alt="Présentation de la MLSG"
             <p class="service-text">
-              Semons des graines ensemble pour votre futur 
+              <br>Semons des graines ensemble pour votre futur 
               Semons des graines ensemble pour votre futur via une aide sur mesure pour décrocher un emploi, entrer en formation, reprendre des études et déterminer votre projet professionnel. Des outils pour votre recherche d’emploi : CV, lettre de motivation, recherche d’offres et de formations, préparation aux entretiens d’embauche, etc. Plus d’infos ci-dessous. Contact : 02/542.63.21 ou 0476/68.07.93 contact@mlsg.be
             </p>
             <a href="https://mlsg.be/accompagnement-vers-l-emploi/coaching-emploi-formation.html" class="btn">En savoir plus</a>
@@ -62,12 +60,13 @@ https://templatemo.com/tm-569-edu-meeting
             <div class="service-icon">
                 <i class="fas fa-laptop-code"></i>
             </div>
-            <h3 class="service-title">ESPACE PUBLIC NUMÉRIQUE</h3>
-            <img class="w-75 img-fluid mb-4" src="../assets/images/numerique.jpg" alt="Présentation de la MLSG"
+            <h3 class="service-title ">ESPACE PUBLIC NUMÉRIQUE</h3>
+            <h3><br>  </h3>
+            <img class="w-75 img-fluid mb-5" src="../assets/images/numerique.jpg" alt="Présentation de la MLSG"
             <p class="service-text">
-              Mise à disposition d’un espace équipé pour votre recherche d’emploi et de formation. Sous la supervision d’un.e agent.e d’accueil, accès gratuit à 16 ordinateurs, une connexion internet, une imprimante, des enveloppes et des timbres pour accomplir toutes vos démarches de recherche d’emploi ou de formation.
+              <br>Mise à disposition d’un espace équipé pour votre recherche d’emploi et de formation. Sous la supervision d’un.e agent.e d’accueil, accès gratuit à 16 ordinateurs, une connexion internet, une imprimante, des enveloppes et des timbres pour accomplir toutes vos démarches de recherche d’emploi ou de formation.
             </p>
-            <a href="#" class="btn">En savoir plus</a>
+            <a href="https://mlsg.be/accompagnement-vers-l-emploi/espace-public-numerique.html" class="btn">En savoir plus</a>
         </div>
     </div>
     <!-- Box 3 -->
@@ -77,12 +76,12 @@ https://templatemo.com/tm-569-edu-meeting
                 <i class="fas fa-store"></i>
             </div>
             <h5 class="service-title">LA BEF : LA BOUTIQUE EMPLOI FORMATION DE SAINT-GILLES</h5>
-            <img class="w-50 img-fluid mb-4" src="../assets/images/bef.png" alt="Présentation de la MLSG"
+            <img class="w-50 img-fluid mb-5" src="../assets/images/bef.png" alt="Présentation de la MLSG"
             <p class="service-text">
-              Une antenne pour aider les chercheur.euse.s d’emplo
+              <br>Une antenne pour aider les chercheur.euse.s d’emplo
               Aide à la recherche d’un emploi ou d’une formation, accompagnement dans votre parcours d’insertion sociale et de formation (CV, démarches administratives) et bien plus encore.
             </p>
-            <a href="#" class="btn">En savoir plus</a>
+            <a href="https://mlsg.be/accompagnement-vers-l-emploi/la-bef-la-boutique-emploi-formation-de-saint-gilles.html" class="btn">En savoir plus</a>
         </div>
     </div>
 </div>
@@ -114,42 +113,11 @@ https://templatemo.com/tm-569-edu-meeting
         $('body, html').scrollTop(reqSectionPos);
       }
     };
-    var checkSection = function checkSection() {
-      $('.section').each(function () {
-        var
-        $this = $(this),
-        topEdge = $this.offset().top - 80,
-        bottomEdge = topEdge + $this.height(),
-        wScroll = $(window).scrollTop();
-        if (topEdge < wScroll && bottomEdge > wScroll) {
-          var
-          currentId = $this.data('section'),
-          reqLink = $('a').filter('[href*=\\#' + currentId + ']');
-          reqLink.closest('li').addClass('active').
-          siblings().removeClass('active');
-        }
-      });
-    };
-    $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
-      e.preventDefault();
-      showSection($(this).attr('href'), true);
-    });
-    $(window).scroll(function () {
-      checkSection();
-    });
+
+    
 </script>
 <script>
-    // Animation supplémentaire au clic sur les boutons
-    document.querySelectorAll('.btn').forEach(button => {
-        button.addEventListener('click', function(e) {
-            e.preventDefault();
-            this.innerHTML = 'Chargement... <i class="fas fa-spinner fa-spin"></i>';
-            setTimeout(() => {
-                this.innerHTML = 'En savoir plus';
-                alert('Page de détail en cours de développement');
-            }, 1500);
-        });
-    })
+
     // Effet supplémentaire au survol des boîtes
     document.querySelectorAll('.service-box').forEach(box => {
         box.addEventListener('mouseenter', function() {
