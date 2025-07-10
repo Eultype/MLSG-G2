@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 
 <head>
 
@@ -9,825 +9,773 @@
     <meta name="author" content="TemplateMo">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
-    <title>Education Meeting HTML5 Template</title>
+    <title>Mission Locale Saint-Gilles - Agenda</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Icône -->
+    <link rel="icon" type="image/png" href="../assets/images/icon.png">
 
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="../assets/css/fontawesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/templatemo-edu-meeting.css">
     <link rel="stylesheet" href="../assets/css/owl.css">
     <link rel="stylesheet" href="../assets/css/lightbox.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.sam.css">
     <!--
 
     TemplateMo 569 Edu Meeting
 
     https://templatemo.com/tm-569-edu-meeting
-
     -->
+    <style>
+
+        :root {
+            --primary-color: #1a5a96; /* Bleu administratif */
+            --secondary-color: #f8f9fa;
+            --accent-color: #e9ecef;
+            --text-color: #212529;
+            --event-color-1: #4e79a7;
+            --event-color-2: #f28e2b;
+            --event-color-3: #e15759;
+            --event-color-4: #76b7b2;
+        }
+        body {
+            color: var(--text-color);
+        }
+        .btn {
+            background-color: rgb(0,168,159);
+        }
+        .calendar-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        .calendar-header {
+            background-color: rgb(227, 0, 86);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        .calendar-title {
+            color: whitesmoke;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 0;
+        }
+        .calendar-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            background-color: var(--accent-color);
+        }
+        .calendar-weekdays {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            background-color: var(--secondary-color);
+            font-weight: 600;
+            text-align: center;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #dee2e6;
+        }
+        .calendar-days {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 1px;
+            background-color: #dee2e6;
+        }
+        .calendar-day {
+            min-height: 100px;
+            background-color: white;
+            padding: 0.5rem;
+            position: relative;
+            transition: all 0.2s ease;
+        }
+        .calendar-day:hover {
+            background-color: #f8f9fa;
+            transform: scale(1.02);
+            z-index: 1;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .day-number {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        .event {
+            font-size: 0.8rem;
+            margin-bottom: 0.2rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            padding: 0.1rem 0.3rem;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .event-dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin-right: 4px;
+        }
+        .other-month {
+            background-color: var(--secondary-color);
+            color: #adb5bd;
+        }
+        .today {
+            background-color: rgba(26, 90, 150, 0.1);
+            border: 1px solid var(--primary-color);
+        }
+        .event-modal .modal-header {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        .event-type {
+            display: inline-block;
+            padding: 0.2rem 0.5rem;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        @media (max-width: 768px) {
+            .calendar-weekdays, .calendar-day {
+                font-size: 0.8rem;
+            }
+            .calendar-day {
+                min-height: 70px;
+                padding: 0.3rem;
+            }
+            .event {
+                font-size: 0.7rem;
+            }
+            .day-number {
+                margin-bottom: 0.2rem;
+            }
+        }
+        @media (max-width: 576px) {
+            .calendar-weekdays {
+                display: none;
+            }
+            .calendar-days {
+                grid-template-columns: 1fr;
+            }
+            .calendar-day {
+                min-height: auto;
+                border-bottom: 1px solid #dee2e6;
+            }
+            .other-month {
+                display: none;
+            }
+            .day-number {
+                font-size: 1rem;
+                margin-bottom: 0.5rem;
+            }
+        }
+
+    </style>
 </head>
 
 <body>
 
-<!-- Sub Header -->
-<div class="sub-header">
+<!-- Navbar -->
+<nav class="navbar navbar-expand-xl navbar-light shadow-lg">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-sm-8">
-                <div class="left-content">
-                    <p>This is an educational <em>HTML CSS</em> template by TemplateMo website.</p>
-                </div>
+        <a class="navbar-brand " href="#">
+            <img src="/assets/images/logo(noir).png" class="logo" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav justify-content-center text-center fs-6">
+                <li class="nav-item">
+                    <a class="nav-link" href="accueil.html">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="qui-sommes-nous.html">Qui sommes-nous ?</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav_turq" href="accompagnement.html">Accompagnement</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav_fram" href="orientation.html">Orientation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav_prune" href="nos-offres-d-emplois.html">Nos offres d'emploi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="agenda-formations.html">Agenda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="biotiful.html">Biotiful</a>
+                </li>
+            </ul>
+            <a id="contact" class="btn btn-turq-ml" href="contact.html">Contact Us</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Calendar Start -->
+<div class="container my-5 mb-5">
+    <div class="calendar-container">
+        <div class="calendar-header">
+            <h1 class="calendar-title">Calendrier des activités</h1>
+            <p class="mb-0 text-white">Mission Locale de Saint-Gilles</p>
+        </div>
+
+        <div class="calendar-nav">
+            <button id="prev-month" class="btn btn-turq-ml ">
+                <i class="fas fa-chevron-left me-1"></i> Mois précédent
+            </button>
+            <h2 id="current-month" class="mb-0 fs-5 fw-bold font-weight-bold">Mois Année</h2>
+            <button id="next-month" class="btn btn-turq-ml">
+                Mois suivant <i class="fas fa-chevron-right ms-1"></i>
+            </button>
+        </div>
+
+        <div class="calendar-weekdays">
+            <div>Lundi</div>
+            <div>Mardi</div>
+            <div>Mercredi</div>
+            <div>Jeudi</div>
+            <div>Vendredi</div>
+            <div>Samedi</div>
+            <div>Dimanche</div>
+        </div>
+
+        <div id="calendar-days" class="calendar-days">
+            <!-- Les jours seront générés par JavaScript -->
+        </div>
+    </div>
+</div>
+
+<!-- Modal pour afficher les détails de l'événement -->
+<div class="modal fade" id="eventModal" tabindex="-1" aria-labelledby="eventModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="eventModalLabel">Détails de l'événement</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="col-lg-4 col-sm-4">
-                <div class="right-icons">
-                    <ul>
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                    </ul>
+            <div class="modal-body">
+                <h4 id="event-title" class="mb-3"></h4>
+                <p><i class="far fa-calendar-alt me-2"></i> <span id="event-date"></span></p>
+                <p><i class="far fa-clock me-2"></i> <span id="event-time"></span></p>
+                <p><i class="fas fa-map-marker-alt me-2"></i> <span id="event-location"></span></p>
+                <div class="mb-3">
+                    <span id="event-type" class="event-type"></span>
                 </div>
+                <p id="event-description"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                <button type="button" class="btn btn-primary">S'inscrire</button>
             </div>
         </div>
     </div>
 </div>
 
-<!-- ***** Header Area Start ***** -->
-<header class="header-area header-sticky">
+<!-- SECTION PARTENAIRES -->
+<div id="partenaires" class="container mt-5">
+    <h2 class="border-bottom p-3 text-center">Partenaires et adhésions</h2>
+    <p class="mt-3 text-center">
+        La MLSG collabore avec de nombreux partenaires locaux et régionaux tels que Actiris, Bruxelles Formation, et les CPAS. Ces collaborations renforcent notre impact et notre capacité d’action.
+    </p>
+</div>
+
+<!-- Partenaires -->
+<div class="container-fluid py-4 shadow-sm">
+    <div class="row justify-content-center">
+        <div class="col-7 col-lg-2 p-0 p-lg-2 partenaire-anim" data-aos-offset="50" data-aos="zoom-out-up"><a target="_blank" href="https://www.actiris.brussels/fr/citoyens/"><img src="../assets/images/part1.png" alt="Actiris"></a></div>
+        <div class="col-7 col-lg-2 p-0 p-lg-2 partenaire-anim" data-aos-offset="50" data-aos="zoom-out-up"><a target="_blank" href="https://be.brussels/fr"><img src="../assets/images/part2.jpg" alt="Be brussels"></a></div>
+        <div class="col-7 col-lg-2 p-0 p-lg-2 partenaire-anim" data-aos-offset="50" data-aos="zoom-out-up"><a target="_blank" href="https://www.bruxellesformation.brussels/"><img src="../assets/images/part3.jpg" alt="Bruxelles Formation"></a></div>
+        <div class="col-7 col-lg-2 p-0 p-lg-2 partenaire-anim" data-aos-offset="50" data-aos="zoom-out-up"><a target="_blank" href="https://ccf.brussels/"><img src="../assets/images/part4.jpg" alt="Francophones Bruxelles"></a></div>
+        <div class="col-7 col-lg-2 p-0 p-lg-2 d-flex justify-content-center align-items-center partenaire-anim" data-aos-offset="50" data-aos="zoom-out-up"><a target="_blank" href="https://fse.be/"><img src="../assets/images/part5.jpg" alt="FSE"></a></div>
+        <div class="col-7 col-lg-2 p-0 p-lg-2 partenaire-anim" data-aos-offset="50" data-aos="zoom-out-up"><a target="_blank" href="https://stgilles.brussels/"><img src="../assets/images/part6.png" alt="Saint Gilles"></a></div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
     <div class="container">
+        <div class="row m-auto">
+            <div class="col-md-3">
+                <div class="footer-brand">
+                    <img src="/assets/images/logo(blanc).png" style="width: 105px; height: 105px;"
+                         alt="Ataraxis Logo">
+                </div>
+                <br>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/missionlocaledesaintgilles?fref=ts" target="_blank"><img
+                            src="/assets/images/facebook-.png" class="rounded" style="width: 35px; height: 35px;"
+                            alt=""></a>
+                    <a href="https://www.youtube.com/channel/UC-_2jO4Bw7PqM5k00sGFdgA" target="_blank"><img
+                            src="/assets/images/youtube-.png" class="rounded" style="width: 35px; height: 35px;"
+                            alt=""></a>
+                    <a href="https://www.instagram.com/missionlocaledesaintgilles/" target="_blank"><img
+                            src="/assets/images/instagram-.png" class="rounded" style="width: 35px; height: 35px;"
+                            alt=""></a>
+                </div>
+                <button class="back-to-top w-75">BACK TO TOP</button>
+            </div>
+            <div class="col-md-3 m-auto">
+                <ul class="footer-links">
+                    <li><a href="">Site Map</a></li>
+                    <li><a href="accueil.html">Accueil</a></li>
+                    <li><a href="qui-sommes-nous.html">Qui sommes-nous ?</a></li>
+                    <li><a href="accompagnement.html">Accompagnement</a></li>
+                    <li><a href="orientation.html">Orientation</a></li>
+                    <li><a href="agenda-formations.html">Agenda formations</a></li>
+                    <li><a href="nos-offres-d-emplois.html">Nos offres d'emploi</a></li>
+                    <li><a href="biotiful.html">Biotiful</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 m-auto">
+                <ul class="footer-links">
+                    <li><a href="#">Legal</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Services</a></li>
+                    <li><a href="#">Lawyer's Corners</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 m-auto">
+                <div class="newsletter-form">
+                    <h5 class="my-2 text-white">Subscribe to our Newsletter</h5>
+                    <form>
+                        <div class="form-group">
+                            <input type="email" class="form-control my-2 w-100" placeholder="Enter your email">
+                        </div>
+                        <button type="submit" class="btn my-2">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <hr>
         <div class="row">
-            <div class="col-12">
-                <nav class="main-nav">
-                    <!-- ***** Logo Start ***** -->
-                    <a href="accueil.html" class="logo">
-                    </a>
-                    <!-- ***** Logo End ***** -->
-                    <!-- ***** Menu Start ***** -->
-                    <ul class="nav">
-                        <li class="scroll-to-section"><a href="#top" class="active">Accueil</a></li>
-                        <li><a href="accompagnement.html">Qui sommes-nous ?</a></li>
-                        <li class="scroll-to-section"><a href="#apply">Accompagnement</a></li>
-                        <li class="has-sub">
-                            <a href="javascript:void(0)">Orientation</a>
-                            <ul class="sub-menu">
-                                <li><a href="accompagnement.html">Upcoming Meetings</a></li>
-                                <li><a href="qui-sommes-nous.html">Meeting Details</a></li>
-                            </ul>
-                        </li>
-                        <li class="scroll-to-section"><a href="#courses">Agenda formations</a></li>
-                        <li class="scroll-to-section"><a href="#contact">Nos offres d'emploi</a></li>
-                        <li><a href="#">Biotiful</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                    <a class='menu-trigger'>
-                        <span>Menu</span>
-                    </a>
-                    <!-- ***** Menu End ***** -->
-                </nav>
+            <div class="col-12 text-center">
+                <p>Copyright © 2022 Edu Meeting Co., Ltd. All Rights Reserved.
+                    <br>
+                    Design: <a href="https://templatemo.com" target="_parent"
+                               title="free css templates" style="color:  rgb(0, 168, 159)">TemplateMo</a>
+                    /
+                    Distibuted By: <a href="https://themewagon.com" target="_blank" title="Build Better UI, Faster"
+                                      style="color: rgb(0, 168, 159)">ThemeWagon</a>
+                </p>
             </div>
         </div>
     </div>
-</header>
-<!-- ***** Header Area End ***** -->
+</footer>
 
-<!-- ***** Main Banner Area Start ***** -->
-<section class="section main-banner" id="top" data-section="section1">
-    <video autoplay muted loop id="bg-video">
-        <source src="../assets/images/course-video.mp4" type="video/mp4" />
-    </video>
-
-    <div class="video-overlay header-text">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="caption">
-                        <h6>Hello Students</h6>
-                        <h2>Welcome to Education</h2>
-                        <p>This is an edu meeting HTML CSS template provided by <a rel="nofollow" href="https://templatemo.com/page/1" target="_blank">TemplateMo website</a>. This is a Bootstrap v5.1.3 layout. The video background is taken from Pexels website, a group of young people by <a rel="nofollow" href="https://www.pexels.com/@pressmaster" target="_blank">Pressmaster</a>.</p>
-                        <div class="main-button-red">
-                            <div class="scroll-to-section"><a href="#contact">Join Us Now!</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- ***** Main Banner Area End ***** -->
-
-<section class="services">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="owl-service-item owl-carousel">
-
-                    <div class="item">
-                        <div class="icon">
-                            <img src="../assets/images/service-icon-01.png" alt="">
-                        </div>
-                        <div class="down-content">
-                            <h4>Best Education</h4>
-                            <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non vestibulum.</p>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="icon">
-                            <img src="../assets/images/service-icon-02.png" alt="">
-                        </div>
-                        <div class="down-content">
-                            <h4>Best Teachers</h4>
-                            <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non vestibulum.</p>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="icon">
-                            <img src="../assets/images/service-icon-03.png" alt="">
-                        </div>
-                        <div class="down-content">
-                            <h4>Best Students</h4>
-                            <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non vestibulum.</p>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="icon">
-                            <img src="../assets/images/service-icon-02.png" alt="">
-                        </div>
-                        <div class="down-content">
-                            <h4>Online Meeting</h4>
-                            <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non vestibulum.</p>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="icon">
-                            <img src="../assets/images/service-icon-03.png" alt="">
-                        </div>
-                        <div class="down-content">
-                            <h4>Best Networking</h4>
-                            <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non vestibulum.</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="upcoming-meetings" id="meetings">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="section-heading">
-                    <h2>Upcoming Meetings</h2>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="categories">
-                    <h4>Meeting Catgories</h4>
-                    <ul>
-                        <li><a href="#">Sed tempus enim leo</a></li>
-                        <li><a href="#">Aenean molestie quis</a></li>
-                        <li><a href="#">Cras et metus vestibulum</a></li>
-                        <li><a href="#">Nam et condimentum</a></li>
-                        <li><a href="#">Phasellus nec sapien</a></li>
-                    </ul>
-                    <div class="main-button-red">
-                        <a href="accompagnement.html">All Upcoming Meetings</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-8">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="meeting-item">
-                            <div class="thumb">
-                                <div class="price">
-                                    <span>$22.00</span>
-                                </div>
-                                <a href="qui-sommes-nous.html"><img src="../assets/images/meeting-01.jpg" alt="New Lecturer Meeting"></a>
-                            </div>
-                            <div class="down-content">
-                                <div class="date">
-                                    <h6>Nov <span>10</span></h6>
-                                </div>
-                                <a href="qui-sommes-nous.html"><h4>New Lecturers Meeting</h4></a>
-                                <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="meeting-item">
-                            <div class="thumb">
-                                <div class="price">
-                                    <span>$36.00</span>
-                                </div>
-                                <a href="qui-sommes-nous.html"><img src="../assets/images/meeting-02.jpg" alt="Online Teaching"></a>
-                            </div>
-                            <div class="down-content">
-                                <div class="date">
-                                    <h6>Nov <span>24</span></h6>
-                                </div>
-                                <a href="qui-sommes-nous.html"><h4>Online Teaching Techniques</h4></a>
-                                <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="meeting-item">
-                            <div class="thumb">
-                                <div class="price">
-                                    <span>$14.00</span>
-                                </div>
-                                <a href="qui-sommes-nous.html"><img src="../assets/images/meeting-03.jpg" alt="Higher Education"></a>
-                            </div>
-                            <div class="down-content">
-                                <div class="date">
-                                    <h6>Nov <span>26</span></h6>
-                                </div>
-                                <a href="qui-sommes-nous.html"><h4>Higher Education Conference</h4></a>
-                                <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="meeting-item">
-                            <div class="thumb">
-                                <div class="price">
-                                    <span>$48.00</span>
-                                </div>
-                                <a href="qui-sommes-nous.html"><img src="../assets/images/meeting-04.jpg" alt="Student Training"></a>
-                            </div>
-                            <div class="down-content">
-                                <div class="date">
-                                    <h6>Nov <span>30</span></h6>
-                                </div>
-                                <a href="qui-sommes-nous.html"><h4>Student Training Meetup</h4></a>
-                                <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="apply-now" id="apply">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 align-self-center">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="item">
-                            <h3>APPLY FOR BACHELOR DEGREE</h3>
-                            <p>You are allowed to use this edu meeting CSS template for your school or university or business. You can feel free to modify or edit this layout.</p>
-                            <div class="main-button-red">
-                                <div class="scroll-to-section"><a href="#contact">Join Us Now!</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-12">
-                        <div class="item">
-                            <h3>APPLY FOR BACHELOR DEGREE</h3>
-                            <p>You are not allowed to redistribute the template ZIP file on any other template website. Please contact us for more information.</p>
-                            <div class="main-button-yellow">
-                                <div class="scroll-to-section"><a href="#contact">Join Us Now!</a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="accordions is-first-expanded">
-                    <article class="accordion">
-                        <div class="accordion-head">
-                            <span>About Edu Meeting HTML Template</span>
-                            <span class="icon">
-                        <i class="icon fa fa-chevron-right"></i>
-                    </span>
-                        </div>
-                        <div class="accordion-body">
-                            <div class="content">
-                                <p>If you want to get the latest collection of HTML CSS templates for your websites, you may visit <a rel="nofollow" href="https://www.toocss.com/" target="_blank">Too CSS website</a>. If you need a working contact form script, please visit <a href="https://templatemo.com/contact" target="_parent">our contact page</a> for more info.</p>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="accordion">
-                        <div class="accordion-head">
-                            <span>HTML CSS Bootstrap Layout</span>
-                            <span class="icon">
-                        <i class="icon fa fa-chevron-right"></i>
-                    </span>
-                        </div>
-                        <div class="accordion-body">
-                            <div class="content">
-                                <p>Etiam posuere metus orci, vel consectetur elit imperdiet eu. Cras ipsum magna, maximus at semper sit amet, eleifend eget neque. Nunc facilisis quam purus, sed vulputate augue interdum vitae. Aliquam a elit massa.<br><br>
-                                    Nulla malesuada elit lacus, ac ultricies massa varius sed. Etiam eu metus eget nibh consequat aliquet. Proin fringilla, quam at euismod porttitor, odio odio tempus ligula, ut feugiat ex erat nec mauris. Donec viverra velit eget lectus sollicitudin tincidunt.</p>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="accordion">
-                        <div class="accordion-head">
-                            <span>Please tell your friends</span>
-                            <span class="icon">
-                        <i class="icon fa fa-chevron-right"></i>
-                    </span>
-                        </div>
-                        <div class="accordion-body">
-                            <div class="content">
-                                <p>Ut vehicula mauris est, sed sodales justo rhoncus eu. Morbi porttitor quam velit, at ullamcorper justo suscipit sit amet. Quisque at suscipit mi, non efficitur velit.<br><br>
-                                    Cras et tortor semper, placerat eros sit amet, porta est. Mauris porttitor sapien et quam volutpat luctus. Nullam sodales ipsum ac neque ultricies varius.</p>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="accordion last-accordion">
-                        <div class="accordion-head">
-                            <span>Share this to your colleagues</span>
-                            <span class="icon">
-                        <i class="icon fa fa-chevron-right"></i>
-                    </span>
-                        </div>
-                        <div class="accordion-body">
-                            <div class="content">
-                                <p>Maecenas suscipit enim libero, vel lobortis justo condimentum id. Interdum et malesuada fames ac ante ipsum primis in faucibus.<br><br>
-                                    Sed eleifend metus sit amet magna tristique, posuere laoreet arcu semper. Nulla pellentesque ut tortor sit amet maximus. In eu libero ullamcorper, semper nisi quis, convallis nisi.</p>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="our-courses" id="courses">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="section-heading">
-                    <h2>Our Popular Courses</h2>
-                </div>
-            </div>
-            <div class="col-lg-12">
-                <div class="owl-courses-item owl-carousel">
-                    <div class="item">
-                        <img src="../assets/images/course-01.jpg" alt="Course One">
-                        <div class="down-content">
-                            <h4>Morbi tincidunt elit vitae justo rhoncus</h4>
-                            <div class="info">
-                                <div class="row">
-                                    <div class="col-8">
-                                        <ul>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-4">
-                                        <span>$160</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="../assets/images/course-02.jpg" alt="Course Two">
-                        <div class="down-content">
-                            <h4>Curabitur molestie dignissim purus vel</h4>
-                            <div class="info">
-                                <div class="row">
-                                    <div class="col-8">
-                                        <ul>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-4">
-                                        <span>$180</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="../assets/images/course-03.jpg" alt="">
-                        <div class="down-content">
-                            <h4>Nulla at ipsum a mauris egestas tempor</h4>
-                            <div class="info">
-                                <div class="row">
-                                    <div class="col-8">
-                                        <ul>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-4">
-                                        <span>$140</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="../assets/images/course-04.jpg" alt="">
-                        <div class="down-content">
-                            <h4>Aenean molestie quis libero gravida</h4>
-                            <div class="info">
-                                <div class="row">
-                                    <div class="col-8">
-                                        <ul>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-4">
-                                        <span>$120</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="../assets/images/course-01.jpg" alt="">
-                        <div class="down-content">
-                            <h4>Lorem ipsum dolor sit amet adipiscing elit</h4>
-                            <div class="info">
-                                <div class="row">
-                                    <div class="col-8">
-                                        <ul>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-4">
-                                        <span>$250</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="../assets/images/course-02.jpg" alt="">
-                        <div class="down-content">
-                            <h4>TemplateMo is the best website for Free CSS</h4>
-                            <div class="info">
-                                <div class="row">
-                                    <div class="col-8">
-                                        <ul>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-4">
-                                        <span>$270</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="../assets/images/course-03.jpg" alt="">
-                        <div class="down-content">
-                            <h4>Web Design Templates at your finger tips</h4>
-                            <div class="info">
-                                <div class="row">
-                                    <div class="col-8">
-                                        <ul>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-4">
-                                        <span>$340</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="../assets/images/course-04.jpg" alt="">
-                        <div class="down-content">
-                            <h4>Please visit our website again</h4>
-                            <div class="info">
-                                <div class="row">
-                                    <div class="col-8">
-                                        <ul>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-4">
-                                        <span>$360</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="../assets/images/course-01.jpg" alt="">
-                        <div class="down-content">
-                            <h4>Responsive HTML Templates for you</h4>
-                            <div class="info">
-                                <div class="row">
-                                    <div class="col-8">
-                                        <ul>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-4">
-                                        <span>$400</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="../assets/images/course-02.jpg" alt="">
-                        <div class="down-content">
-                            <h4>Download Free CSS Layouts for your business</h4>
-                            <div class="info">
-                                <div class="row">
-                                    <div class="col-8">
-                                        <ul>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-4">
-                                        <span>$430</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="../assets/images/course-03.jpg" alt="">
-                        <div class="down-content">
-                            <h4>Morbi in libero blandit lectus cursus</h4>
-                            <div class="info">
-                                <div class="row">
-                                    <div class="col-8">
-                                        <ul>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-4">
-                                        <span>$480</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="../assets/images/course-04.jpg" alt="">
-                        <div class="down-content">
-                            <h4>Curabitur molestie dignissim purus</h4>
-                            <div class="info">
-                                <div class="row">
-                                    <div class="col-8">
-                                        <ul>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-4">
-                                        <span>$560</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="our-facts">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h2>A Few Facts About Our University</h2>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="count-area-content percentage">
-                                    <div class="count-digit">94</div>
-                                    <div class="count-title">Succesed Students</div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="count-area-content">
-                                    <div class="count-digit">126</div>
-                                    <div class="count-title">Current Teachers</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="count-area-content new-students">
-                                    <div class="count-digit">2345</div>
-                                    <div class="count-title">New Students</div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="count-area-content">
-                                    <div class="count-digit">32</div>
-                                    <div class="count-title">Awards</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 align-self-center">
-                <div class="video">
-                    <a href="https://www.youtube.com/watch?v=HndV87XpkWg" target="_blank"><img src="../assets/images/play-icon.png" alt=""></a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="contact-us" id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-9 align-self-center">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <form id="contact" action="" method="post">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <h2>Let's get in touch</h2>
-                                </div>
-                                <div class="col-lg-4">
-                                    <fieldset>
-                                        <input name="name" type="text" id="name" placeholder="YOURNAME...*" required="">
-                                    </fieldset>
-                                </div>
-                                <div class="col-lg-4">
-                                    <fieldset>
-                                        <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="YOUR EMAIL..." required="">
-                                    </fieldset>
-                                </div>
-                                <div class="col-lg-4">
-                                    <fieldset>
-                                        <input name="subject" type="text" id="subject" placeholder="SUBJECT...*" required="">
-                                    </fieldset>
-                                </div>
-                                <div class="col-lg-12">
-                                    <fieldset>
-                                        <textarea name="message" type="text" class="form-control" id="message" placeholder="YOUR MESSAGE..." required=""></textarea>
-                                    </fieldset>
-                                </div>
-                                <div class="col-lg-12">
-                                    <fieldset>
-                                        <button type="submit" id="form-submit" class="button">SEND MESSAGE NOW</button>
-                                    </fieldset>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3">
-                <div class="right-info">
-                    <ul>
-                        <li>
-                            <h6>Phone Number</h6>
-                            <span>010-020-0340</span>
-                        </li>
-                        <li>
-                            <h6>Email Address</h6>
-                            <span>info@meeting.edu</span>
-                        </li>
-                        <li>
-                            <h6>Street Address</h6>
-                            <span>Rio de Janeiro - RJ, 22795-008, Brazil</span>
-                        </li>
-                        <li>
-                            <h6>Website URL</h6>
-                            <span>www.meeting.edu</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="footer">
-        <p>Copyright © 2022 Edu Meeting Co., Ltd. All Rights Reserved.
-            <br>
-            Design: <a href="https://templatemo.com" target="_parent" title="free css templates">TemplateMo</a>
-            <br>
-            Distibuted By: <a href="https://themewagon.com" target="_blank" title="Build Better UI, Faster">ThemeWagon</a>
-        </p>
-    </div>
-</section>
+<!-- Calendar End -->
 
 <!-- Scripts -->
 <!-- Bootstrap core JavaScript -->
 <script src="../vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+<script src="../assets/js/script.sam.js"></script>
+<!-- jQuery (si nécessaire, pour d’autres scripts, mais pas obligatoire pour Bootstrap 5) -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
-<script src="../assets/js/isotope.min.js"></script>
-<script src="../assets/js/owl-carousel.js"></script>
-<script src="../assets/js/lightbox.js"></script>
-<script src="../assets/js/tabs.js"></script>
-<script src="../assets/js/video.js"></script>
-<script src="../assets/js/slick-slider.js"></script>
-<script src="../assets/js/custom.js"></script>
+<!-- Bundle Bootstrap 5 (CSS déjà inclus, ici le JS) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 <script>
-    //according to loftblog tut
-    $('.nav li:first').addClass('active');
+    // Données des événements (peut être remplacé par un appel API ou un fichier JSON)
+    const eventsData = [
+        {
+            id: 1,
+            title: "Atelier CV",
+            date: "2025-07-15",
+            time: "14:00 - 16:00",
+            location: "Salle de réunion 1",
+            description: "Atelier pour apprendre à rédiger un CV efficace et adapté au marché du travail actuel.",
+            type: "Atelier",
+            color: "var(--event-color-1)"
+        },
+        {
+            id: 2,
+            title: "Entretiens individuels",
+            date: "2023-11-20",
+            time: "09:00 - 12:00",
+            location: "Bureau des conseillers",
+            description: "Entretiens individuels avec les conseillers pour faire le point sur votre parcours.",
+            type: "Rendez-vous",
+            color: "var(--event-color-2)"
+        },
+        {
+            id: 3,
+            title: "Forum des métiers",
+            date: "2023-11-22",
+            time: "10:00 - 17:00",
+            location: "Espace polyvalent",
+            description: "Découverte des différents métiers et rencontres avec des professionnels.",
+            type: "Événement",
+            color: "var(--event-color-3)"
+        },
+        {
+            id: 4,
+            title: "Formation numérique",
+            date: "2023-11-25",
+            time: "13:30 - 16:30",
+            location: "Salle informatique",
+            description: "Formation aux outils numériques essentiels pour la recherche d'emploi.",
+            type: "Formation",
+            color: "var(--event-color-4)"
+        },
+        {
+            id: 5,
+            title: "Réunion d'information",
+            date: "2023-11-28",
+            time: "18:00 - 20:00",
+            location: "Salle principale",
+            description: "Présentation des nouveaux programmes et services de la mission locale.",
+            type: "Réunion",
+            color: "var(--event-color-1)"
+        },
+        {
+            id: 6,
+            title: "Atelier LinkedIn",
+            date: "2025-07-18",
+            time: "10:00 - 12:00",
+            location: "Salle multimédia",
+            description: "Atelier pour apprendre à optimiser son profil LinkedIn et développer son réseau.",
+            type: "Atelier",
+            color: "var(--event-color-3)"
+        },
+        {
+            id: 7,
+            title: "Petit-déjeuner réseau",
+            date: "2025-07-22",
+            time: "08:30 - 10:00",
+            location: "Salle principale",
+            description: "Moment convivial pour élargir son réseau et rencontrer des professionnels du territoire.",
+            type: "Réseautage",
+            color: "var(--event-color-1)"
+        },
+        {
+            id: 8,
+            title: "Session coaching orientation",
+            date: "2025-07-30",
+            time: "15:00 - 17:00",
+            location: "Salle de coaching",
+            description: "Séance collective pour aider les jeunes à clarifier leur projet d’orientation professionnelle.",
+            type: "Coaching",
+            color: "var(--event-color-2)"
+        },
+        {
+            id: 9,
+            title: "Visite d'entreprise",
+            date: "2025-08-05",
+            time: "09:30 - 12:00",
+            location: "Entreprise locale",
+            description: "Découverte d’une entreprise partenaire, ses métiers et ses opportunités d’embauche.",
+            type: "Visite",
+            color: "var(--event-color-4)"
+        },
+        {
+            id: 10,
+            title: "Atelier gestion du stress",
+            date: "2025-08-12",
+            time: "14:00 - 16:00",
+            location: "Salle bien-être",
+            description: "Atelier pour apprendre à gérer le stress en situation de recherche d’emploi.",
+            type: "Atelier",
+            color: "var(--event-color-3)"
+        },
+        {
+            id: 11,
+            title: "Formation prise de parole",
+            date: "2025-08-20",
+            time: "10:00 - 13:00",
+            location: "Salle formation",
+            description: "Formation dédiée à la prise de parole en public et à la préparation des entretiens.",
+            type: "Formation",
+            color: "var(--event-color-4)"
+        },
+        {
+            id: 12,
+            title: "Rencontre avec un expert métier",
+            date: "2025-09-02",
+            time: "16:00 - 18:00",
+            location: "Espace coworking",
+            description: "Session questions/réponses avec un expert du secteur du numérique.",
+            type: "Événement",
+            color: "var(--event-color-2)"
+        },
+        {
+            id: 18,
+            title: "Atelier Découverte des métiers du sport",
+            date: "2025-08-16",
+            time: "10:00 - 12:00",
+            location: "Gymnase municipal",
+            description: "Présentation des différentes carrières dans le sport avec des intervenants professionnels.",
+            type: "Atelier",
+            color: "var(--event-color-4)"
+        },
+        {
+            id: 19,
+            title: "Rencontre avec un conseiller Mission Locale",
+            date: "2025-08-17",
+            time: "14:00 - 15:30",
+            location: "Bureau accueil",
+            description: "Moment d’écoute et d’orientation personnalisé pour les jeunes en recherche de projet.",
+            type: "Accompagnement",
+            color: "var(--event-color-2)"
+        },
+        {
+            id: 20,
+            title: "Atelier numérique : créer son CV en ligne",
+            date: "2025-08-19",
+            time: "09:30 - 11:30",
+            location: "Salle informatique",
+            description: "Formation à la création et mise en page de CV avec les outils numériques du web.",
+            type: "Atelier",
+            color: "var(--event-color-1)"
+        },
+        {
+            id: 21,
+            title: "Visite découverte d'une entreprise locale",
+            date: "2025-08-20",
+            time: "14:00 - 16:30",
+            location: "Entreprise partenaire",
+            description: "Découverte des métiers et visite guidée d’une entreprise de la région.",
+            type: "Visite",
+            color: "var(--event-color-3)"
+        },
+        {
+            id: 22,
+            title: "Atelier confiance en soi",
+            date: "2025-08-23",
+            time: "10:00 - 12:00",
+            location: "Salle bien-être",
+            description: "Atelier interactif pour renforcer l’estime et la confiance en soi en situation professionnelle.",
+            type: "Atelier",
+            color: "var(--event-color-2)"
+        },
+        {
+            id: 23,
+            title: "Forum des formations de l'automne",
+            date: "2025-09-24",
+            time: "13:30 - 17:00",
+            location: "Maison des associations",
+            description: "Présentation des programmes de formation à venir et inscription sur place.",
+            type: "Forum",
+            color: "var(--event-color-1)"
+        },
+        {
+            id: 24,
+            title: "Initiation au théâtre ",
+            date: "2025-07-16",
+            time: "14:00 - 16:00",
+            location: "Salle culturelle",
+            description: "Atelier ludique pour développer l’expression orale et la créativité grâce à l’impro.",
+            type: "Atelier",
+            color: "var(--event-color-2)"
+        },
+        {
+            id: 25,
+            title: "Point infos logement jeune",
+            date: "2025-07-17",
+            time: "10:00 - 11:30",
+            location: "Espace info jeunes",
+            description: "Conseils personnalisés et réponses aux questions sur la recherche de logement étudiant.",
+            type: "Info",
+            color: "var(--event-color-3)"
+        },
+        {
+            id: 26,
+            title: "Atelier : préparer son entretien d’embauche",
+            date: "2025-07-19",
+            time: "09:30 - 11:30",
+            location: "Salle formation",
+            description: "Entraînement en groupe à la présentation et aux questions classiques en entretien.",
+            type: "Atelier",
+            color: "var(--event-color-4)"
+        },
+        {
+            id: 27,
+            title: "Jeux sportifs collaboratifs",
+            date: "2025-07-20",
+            time: "15:00 - 17:00",
+            location: "Terrain multisports",
+            description: "Après-midi conviviale autour de jeux collectifs pour favoriser l’esprit d’équipe.",
+            type: "Animation",
+            color: "var(--event-color-1)"
+        },
+        {
+            id: 28,
+            title: "Sensibilisation aux métiers du numérique",
+            date: "2025-07-23",
+            time: "14:00 - 16:00",
+            location: "Salle informatique",
+            description: "Panorama des formations et métiers du secteur digital, échanges avec des professionnels.",
+            type: "Info",
+            color: "var(--event-color-2)"
+        },
+        {
+            id: 29,
+            title: "Café découverte",
+            date: "2025-07-24",
+            time: "16:00 - 18:00",
+            location: "Espace accueil",
+            description: "Temps d’information et de partage autour des possibilités de bénévolat local.",
+            type: "Rencontre",
+            color: "var(--event-color-3)"
+        }
+    ];
 
-    var showSection = function showSection(section, isAnimate) {
-        var
-            direction = section.replace(/#/, ''),
-            reqSection = $('.section').filter('[data-section="' + direction + '"]'),
-            reqSectionPos = reqSection.offset().top - 0;
+    // Variables globales
+    let currentDate = new Date();
+    let currentMonth = currentDate.getMonth();
+    let currentYear = currentDate.getFullYear();
 
-        if (isAnimate) {
-            $('body, html').animate({
-                    scrollTop: reqSectionPos },
-                800);
-        } else {
-            $('body, html').scrollTop(reqSectionPos);
+    // Éléments du DOM
+    const calendarDays = document.getElementById('calendar-days');
+    const currentMonthElement = document.getElementById('current-month');
+    const prevMonthBtn = document.getElementById('prev-month');
+    const nextMonthBtn = document.getElementById('next-month');
+    const eventModal = new bootstrap.Modal(document.getElementById('eventModal'));
+
+    // Initialisation du calendrier
+    function initCalendar() {
+        updateCalendar();
+
+        // Écouteurs d'événements
+        prevMonthBtn.addEventListener('click', () => {
+            currentMonth--;
+            if (currentMonth < 0) {
+                currentMonth = 11;
+                currentYear--;
+            }
+            updateCalendar();
+        });
+
+        nextMonthBtn.addEventListener('click', () => {
+            currentMonth++;
+            if (currentMonth > 11) {
+                currentMonth = 0;
+                currentYear++;
+            }
+            updateCalendar();
+        });
+    }
+
+    // Mettre à jour le calendrier
+    function updateCalendar() {
+        // Mettre à jour le titre du mois
+        const monthNames = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin",
+            "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"];
+        currentMonthElement.textContent = `${monthNames[currentMonth]} ${currentYear}`;
+
+        // Calculer le premier jour du mois et le nombre de jours dans le mois
+        const firstDay = new Date(currentYear, currentMonth, 1);
+        const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+
+        // Calculer le jour de la semaine du premier jour (0 = dimanche, 1 = lundi, etc.)
+        let firstDayOfWeek = firstDay.getDay();
+        // Ajuster pour que la semaine commence le lundi (1)
+        firstDayOfWeek = firstDayOfWeek === 0 ? 6 : firstDayOfWeek - 1;
+
+        // Calculer le nombre de jours du mois précédent à afficher
+        const prevMonthDays = new Date(currentYear, currentMonth, 0).getDate();
+
+        // Effacer le calendrier actuel
+        calendarDays.innerHTML = '';
+
+        // Ajouter les jours du mois précédent
+        for (let i = 0; i < firstDayOfWeek; i++) {
+            const day = document.createElement('div');
+            day.className = 'calendar-day other-month';
+            day.textContent = prevMonthDays - firstDayOfWeek + i + 1;
+            calendarDays.appendChild(day);
         }
 
-    };
+        // Ajouter les jours du mois actuel
+        const today = new Date();
+        for (let i = 1; i <= daysInMonth; i++) {
+            const day = document.createElement('div');
+            day.className = 'calendar-day';
 
-    var checkSection = function checkSection() {
-        $('.section').each(function () {
-            var
-                $this = $(this),
-                topEdge = $this.offset().top - 80,
-                bottomEdge = topEdge + $this.height(),
-                wScroll = $(window).scrollTop();
-            if (topEdge < wScroll && bottomEdge > wScroll) {
-                var
-                    currentId = $this.data('section'),
-                    reqLink = $('a').filter('[href*=\\#' + currentId + ']');
-                reqLink.closest('li').addClass('active').
-                siblings().removeClass('active');
+            // Vérifier si c'est aujourd'hui
+            if (i === today.getDate() && currentMonth === today.getMonth() && currentYear === today.getFullYear()) {
+                day.classList.add('today');
             }
-        });
-    };
 
-    $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
-        e.preventDefault();
-        showSection($(this).attr('href'), true);
-    });
+            // Numéro du jour
+            const dayNumber = document.createElement('div');
+            dayNumber.className = 'day-number';
+            dayNumber.textContent = i;
+            day.appendChild(dayNumber);
 
-    $(window).scroll(function () {
-        checkSection();
-    });
+            // Ajouter les événements pour ce jour
+            const currentDateStr = `${currentYear}-${String(currentMonth + 1).padStart(2, '0')}-${String(i).padStart(2, '0')}`;
+            const dayEvents = eventsData.filter(event => event.date === currentDateStr);
+
+            dayEvents.forEach(event => {
+                const eventElement = document.createElement('div');
+                eventElement.className = 'event';
+                eventElement.style.backgroundColor = `${event.color}20`;
+                eventElement.style.borderLeft = `3px solid ${event.color}`;
+                eventElement.innerHTML = `
+                        <span class="event-dot" style="background-color: ${event.color}"></span>
+                        ${event.title}
+                    `;
+
+                // Ajouter un gestionnaire d'événements pour afficher les détails
+                eventElement.addEventListener('click', () => showEventDetails(event));
+
+                day.appendChild(eventElement);
+            });
+
+            calendarDays.appendChild(day);
+        }
+
+        // Calculer le nombre de jours du mois suivant à afficher
+        const totalDaysDisplayed = firstDayOfWeek + daysInMonth;
+        const nextMonthDaysToShow = totalDaysDisplayed <= 35 ? 35 - totalDaysDisplayed : 42 - totalDaysDisplayed;
+
+        // Ajouter les jours du mois suivant
+        for (let i = 1; i <= nextMonthDaysToShow; i++) {
+            const day = document.createElement('div');
+            day.className = 'calendar-day other-month';
+            day.textContent = i;
+            calendarDays.appendChild(day);
+        }
+    }
+
+    // Afficher les détails de l'événement dans une modal
+    function showEventDetails(event) {
+        document.getElementById('event-title').textContent = event.title;
+        document.getElementById('event-date').textContent = formatDate(event.date);
+        document.getElementById('event-time').textContent = event.time;
+        document.getElementById('event-location').textContent = event.location;
+        document.getElementById('event-type').textContent = event.type;
+        document.getElementById('event-type').style.backgroundColor = event.color;
+        document.getElementById('event-description').textContent = event.description;
+
+        eventModal.show();
+    }
+
+    // Formater la date en français
+    function formatDate(dateStr) {
+        const date = new Date(dateStr);
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        return date.toLocaleDateString('fr-FR', options);
+    }
+
+    // Initialiser le calendrier au chargement de la page
+    document.addEventListener('DOMContentLoaded', initCalendar);
 </script>
-</body>
-
 </body>
 </html>

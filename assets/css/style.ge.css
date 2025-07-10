@@ -66,20 +66,7 @@ p{
     position: relative;
     z-index: 1;
 }
-    
 
-body {
-    background-color: #f5f7fa;
-    padding: 40px 20px;
-}
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-}
 .service-box {
     width: 350px;
     background: linear-gradient(135deg, rgba(252, 246, 249, 0.9) 0%, rgba(240,255,253,0.9) 100%);
@@ -126,18 +113,7 @@ body {
     margin-bottom: 25px;
     font-size: 15px;
 }
-.btn {
-    margin-top: 20px;
-    display: inline-block;
-    padding: 12px 25px;
-    background-color: rgb(0, 168, 159);
-    color: white;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    border:2px solid rgb(0, 168, 159);
-}
+
 .btn:hover {
     background-color: transparent;
     color:rgb(0, 168, 159);
