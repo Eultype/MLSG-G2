@@ -128,7 +128,7 @@
 
                 <div class="mb-3 anim-formulaire">
                     <label for="email" class="form-label">Adresse e-mail</label>
-                    <input type="email" class="form-control" id="email" placeholder="exemple@email.com" required>
+                    <input type="email" class="form-control" name="email" id="email" placeholder="exemple@email.com" required>
                 </div>
 
                 <div class="row mb-4">
@@ -235,10 +235,10 @@
             </div>
             <div class="col-lg-4 m-auto mt-3">
                 <div class="newsletter-form">
-                    <h5 class="my-2 text-white">Inscrivez-vous à notre Newsletter</h5>
                     <form>
                         <div class="form-group">
-                            <input type="email" class="form-control my-2 w-100" placeholder="Entrez votre email">
+                            <label for="email_news" class="form-label text-white fw-bold">Inscrivez-vous à notre Newsletter</label>
+                            <input type="email" id="email_news" name="email_news" class="form-control my-2 w-100" placeholder="Entrez votre email" required>
                         </div>
                         <button type="submit" class="btn my-2">Subscribe</button>
                     </form>
