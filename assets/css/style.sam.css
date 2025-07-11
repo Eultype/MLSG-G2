@@ -164,15 +164,15 @@ span {
 }
 
 .title_turq {
-    color: #00A89F;
+    color: #00A89F !important;
 }
 
 .title_fram {
-    color: #E30056;
+    color: #E30056 !important;
 }
 
 .title_prune {
-    color: #8D2676;
+    color: #8D2676 !important;
 }
 
 hr {

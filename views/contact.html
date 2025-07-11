@@ -2,66 +2,97 @@
 <html lang="fr">
 
 <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="TemplateMo">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-
     <title>Mission Locale Saint-Gilles - Contact</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="../assets/css/fontawesome.css">
     <link rel="stylesheet" href="../assets/css/templatemo-edu-meeting.css">
     <link rel="stylesheet" href="../assets/css/owl.css">
     <link rel="stylesheet" href="../assets/css/lightbox.css">
     <link rel="stylesheet" href="../assets/css/style.sam.css">
-
+    <!-- Icône -->
+    <link rel="icon" type="image/png" href="../assets/images/icon.png">
+    <!-- Team CSS -->
+    <link rel="stylesheet" href="../assets/css/style.sam.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-
     <!--
-
     TemplateMo 569 Edu Meeting
-
     https://templatemo.com/tm-569-edu-meeting
-
     -->
 </head>
 
-<body class="pt-5">
+<body>
 <!-- Navbar -->
-
-
+<nav class="navbar navbar-expand-xl navbar-light shadow-sm">
+    <div class="container">
+        <a class="navbar-brand " href="#">
+            <img src="/assets/images/logo(noir).png" class="logo" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav justify-content-center text-center fs-6">
+                <li class="nav-item">
+                    <a class="nav-link" href="accueil.html">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="qui-sommes-nous.html">Qui sommes-nous ?</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav_turq" href="accompagnement.html">Accompagnement</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav_fram" href="orientation.html">Orientation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav_prune" href="nos-offres-d-emplois.html">Nos offres d'emploi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="agenda-formations.html">Agenda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="biotiful.html">Biotiful</a>
+                </li>
+            </ul>
+            <a id="contact" class="btn btn-turq-ml actic" href="contact.html">Contact Us</a>
+        </div>
+    </div>
+</nav>
 
 <!-- Formulaire de contact -->
 <div class="container border border-3 border-prune rounded my-5 mx-auto bg-light shadow-lg">
     <div class="row justify-content-center rounded mb-3">
         <!-- Colonne gauche : Coordonnées/Infos Mission Locale -->
         <div class="col-12 col-lg-6 contact-block d-flex flex-column justify-content-center align-items-center text-center position-relative py-5 order-2 order-lg-1">
-            <h3 class="mb-1">📞 Appelez-nous</h3>
-            <p class="text-turq-ml fw-bold mb-3">
+            <h3 class="mb-1 anim-form">📞 Appelez-nous</h3>
+            <p class="text-turq-ml fw-bold mb-3 anim-form">
                 Tel: 02 542 63 21<br>
                 GSM: 0476/68.07.93
             </p>
-            <h3 class="mb-1">✉️ Support général</h3>
-            <p id="mail" class="text-turq-ml fw-bold mb-3">contact@mlsg.be</p>
-            <h3 class="mb-1">⏰ Horaires d'ouvertures</h3>
-            <p class="text-turq-ml fw-bold mb-3">
+            <h3 class="mb-1 anim-form">✉️ Support général</h3>
+            <p id="mail" class="text-turq-ml fw-bold mb-3 anim-form">contact@mlsg.be</p>
+            <h3 class="mb-1 anim-form">⏰ Horaires d'ouvertures</h3>
+            <p class="text-turq-ml fw-bold mb-3 anim-form">
                 Tous les jours de 8h30h à 12h00 et de 13h00 à 16h00.<br>
                 Fermé le mercredi toute la journée.
             </p>
-            <h3 class="mb-1">📍 Adresse</h3>
-            <p id="adresse" class="text-turq-ml fw-bold mb-3">Chaussée de Waterloo 255 (2e étage) - 1060 Saint-Gilles</p>
-            <h3 class="mb-1">🚌 Accèssibilité</h3>
-            <p class="text-turq-ml fw-bold mb-3">
+            <h3 class="mb-1 anim-form">📍 Adresse</h3>
+            <p id="adresse" class="text-turq-ml fw-bold mb-3 anim-form">Chaussée de Waterloo 255 (2e étage) - 1060 Saint-Gilles</p>
+            <h3 class="mb-1 anim-form">🚌 Accessibilité</h3>
+            <p class="text-turq-ml fw-bold mb-3 anim-form">
                 Accès STIB : Tram 3, 4 et 51 (arrêt Horta)<br>
                 Tram 81, 92 et 97 (arrêts Moris ou Lombardie)<br>
                 Bus 48 (Barrière) – Bus 54 (arrêt Ma Campagne)
@@ -70,44 +101,45 @@
 
         <!-- Colonne droite : Formulaire de contact -->
         <div class="col-12 col-lg-6 py-5 order-1 order-lg-2">
-            <h3 class="text-center my-2">Contactez la Mission Locale</h3>
-            <p class="text-center mb-3">Remplissez ce formulaire et nous vous recontacterons dans les plus brefs délais.</p>
+            <h3 class="text-center my-2 anim-form-title">Contactez la Mission Locale</h3>
+            <p class="text-center mb-3 anim-form-text">Remplissez ce formulaire et nous vous recontacterons dans les plus brefs délais.</p>
             <div class="verifMessage px-3 text-center my-1">
                 <div id="verifEmail"></div>
                 <div id="verifTel"></div>
+                <div id="verifCP"></div>
                 <div id="succes"></div>
             </div>
 
             <form class="mx-auto">
                 <div class="row">
                     <div class="col-sm-6 mb-3">
-                        <label for="prenom" class="form-label">Prénom</label>
-                        <input type="text" class="form-control" id="prenom" placeholder="Votre prénom" required>
+                        <label for="prenom" class="form-label anim-formulaire">Prénom</label>
+                        <input type="text" class="form-control anim-formulaire" id="prenom" placeholder="Votre prénom" required>
                     </div>
 
                     <div class="col-sm-6 mb-3">
-                        <label for="nom" class="form-label">Nom</label>
-                        <input type="text" class="form-control" id="nom" placeholder="Votre nom" required>
+                        <label for="nom" class="form-label anim-formulaire">Nom</label>
+                        <input type="text" class="form-control anim-formulaire" id="nom" placeholder="Votre nom" required>
                     </div>
                 </div>
 
-                <div class="mb-3">
+                <div class="mb-3 anim-formulaire">
                     <label for="email" class="form-label">Adresse e-mail</label>
                     <input type="email" class="form-control" id="email" placeholder="exemple@email.com" required>
                 </div>
 
                 <div class="row mb-4">
                     <div class="col-sm-6">
-                        <label for="telephone" class="form-label">Téléphone</label>
-                        <input type="text" class="form-control" id="telephone" placeholder="04 00 00 00 00" required>
+                        <label for="telephone" class="form-label anim-formulaire">Téléphone</label>
+                        <input type="text" class="form-control anim-formulaire" id="telephone" placeholder="04 00 00 00 00" required>
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-sm-6 anim-formulaire">
                         <label for="codepostal" class="form-label">Code postal</label>
                         <input type="text" class="form-control" id="codepostal" placeholder="0000" required>
                     </div>
                 </div>
 
-                <div class="mb-3">
+                <div class="mb-3 anim-formulaire">
                     <label for="select" class="form-label">Type de demande</label>
                     <select id="select" name="sujet" class="form-select">
                         <option selected>Sélectionnez une option</option>
@@ -120,12 +152,12 @@
 
                 </div>
 
-                <div class="mb-3">
+                <div class="mb-3 anim-formulaire">
                     <label for="message" class="form-label">Votre message</label>
                     <textarea class="form-control" id="message" rows="5" placeholder="Expliquez votre demande..." required></textarea>
                 </div>
 
-                <div class="text-center">
+                <div class="text-center anim-formulaire">
                     <button type="submit" class="btn btn-turq-ml w-50">Envoyer le message</button>
                 </div>
                 <div class="d-lg-none"><hr></div>
@@ -141,55 +173,106 @@
         <div id="map" class="rounded" style="width: 100%; height: 400px;"></div>
     </div>
 </div>
+<hr>
+<!-- SECTION PARTENAIRES -->
+<div id="partenaires" class="container mt-5">
+    <h2 class="p-3 text-center">Partenaires et adhésions</h2>
+    <p class="mt-3 text-center">
+        La MLSG collabore avec de nombreux partenaires locaux et régionaux tels que Actiris, Bruxelles Formation, et les CPAS. Ces collaborations renforcent notre impact et notre capacité d’action.
+    </p>
+</div>
 
-<!-- FOOTER -->
+<!-- Partenaires -->
+<div class="container-fluid py-4 shadow-sm">
+    <div class="row justify-content-center">
+        <div class="col-7 col-lg-2 p-0 p-lg-2 partenaire-anim" data-aos-offset="50" data-aos="zoom-out-up"><a target="_blank" href="https://www.actiris.brussels/fr/citoyens/"><img src="../assets/images/part1.png" alt="Actiris"></a></div>
+        <div class="col-7 col-lg-2 p-0 p-lg-2 partenaire-anim" data-aos-offset="50" data-aos="zoom-out-up"><a target="_blank" href="https://be.brussels/fr"><img src="../assets/images/part2.jpg" alt="Be brussels"></a></div>
+        <div class="col-7 col-lg-2 p-0 p-lg-2 partenaire-anim" data-aos-offset="50" data-aos="zoom-out-up"><a target="_blank" href="https://www.bruxellesformation.brussels/"><img src="../assets/images/part3.jpg" alt="Bruxelles Formation"></a></div>
+        <div class="col-7 col-lg-2 p-0 p-lg-2 partenaire-anim" data-aos-offset="50" data-aos="zoom-out-up"><a target="_blank" href="https://ccf.brussels/"><img src="../assets/images/part4.jpg" alt="Francophones Bruxelles"></a></div>
+        <div class="col-7 col-lg-2 p-0 p-lg-2 d-flex justify-content-center align-items-center partenaire-anim" data-aos-offset="50" data-aos="zoom-out-up"><a target="_blank" href="https://fse.be/"><img src="../assets/images/part5.jpg" alt="FSE"></a></div>
+        <div class="col-7 col-lg-2 p-0 p-lg-2 partenaire-anim" data-aos-offset="50" data-aos="zoom-out-up"><a target="_blank" href="https://stgilles.brussels/"><img src="../assets/images/part6.png" alt="Saint Gilles"></a></div>
+    </div>
+</div>
 
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="row m-auto">
+            <div class="col-md-3">
+                <div class="footer-brand">
+                    <img src="/assets/images/logo(blanc).png" style="width: 105px; height: 105px;"
+                         alt="Ataraxis Logo">
+                </div>
+                <br>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/missionlocaledesaintgilles?fref=ts" target="_blank"><img
+                            src="/assets/images/facebook-.png" class="rounded" style="width: 35px; height: 35px;"
+                            alt=""></a>
+                    <a href="https://www.youtube.com/channel/UC-_2jO4Bw7PqM5k00sGFdgA" target="_blank"><img
+                            src="/assets/images/youtube-.png" class="rounded" style="width: 35px; height: 35px;"
+                            alt=""></a>
+                    <a href="https://www.instagram.com/missionlocaledesaintgilles/" target="_blank"><img
+                            src="/assets/images/instagram-.png" class="rounded" style="width: 35px; height: 35px;"
+                            alt=""></a>
+                </div>
+                <button class="back-to-top w-75">BACK TO TOP</button>
+            </div>
+            <div class="col-md-3 m-auto">
+                <ul class="footer-links">
+                    <li><a href="">Site Map</a></li>
+                    <li><a href="accueil.html">Accueil</a></li>
+                    <li><a href="qui-sommes-nous.html">Qui sommes-nous ?</a></li>
+                    <li><a href="accompagnement.html">Accompagnement</a></li>
+                    <li><a href="orientation.html">Orientation</a></li>
+                    <li><a href="agenda-formations.html">Agenda formations</a></li>
+                    <li><a href="nos-offres-d-emplois.html">Nos offres d'emploi</a></li>
+                    <li><a href="biotiful.html">Biotiful</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 m-auto">
+                <ul class="footer-links">
+                    <li><a href="#">Legal</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Services</a></li>
+                    <li><a href="#">Lawyer's Corners</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 m-auto">
+                <div class="newsletter-form">
+                    <h5 class="my-2 text-white">Subscribe to our Newsletter</h5>
+                    <form>
+                        <div class="form-group">
+                            <input type="email" class="form-control my-2 w-100" placeholder="Enter your email">
+                        </div>
+                        <button type="submit" class="btn my-2">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-12 text-center">
+                <p>Copyright © 2022 Edu Meeting Co., Ltd. All Rights Reserved.
+                    <br>
+                    Design: <a href="https://templatemo.com" target="_parent"
+                               title="free css templates" style="color:  rgb(0, 168, 159)">TemplateMo</a>
+                    /
+                    Distibuted By: <a href="https://themewagon.com" target="_blank" title="Build Better UI, Faster"
+                                      style="color: rgb(0, 168, 159)">ThemeWagon</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
 
 <!-- Scripts -->
 <!-- Bootstrap core JavaScript -->
+<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
 <script src="../vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-<script src="../assets/js/isotope.min.js"></script>
-<script src="../assets/js/owl-carousel.js"></script>
-<script src="../assets/js/lightbox.js"></script>
-<script src="../assets/js/tabs.js"></script>
-<script src="../assets/js/video.js"></script>
-<script src="../assets/js/slick-slider.js"></script>
-<script src="../assets/js/custom.js"></script>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        let coords = [50.8247416, 4.3489723];
-        let map = L.map('map').setView(coords, 15);
-
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-        }).addTo(map);
-
-        let marker = L.marker(coords).addTo(map)
-            .bindPopup('<strong>Chaussée de Waterloo 255 - 1060 Saint-Gilles</strong>');
-
-        let adresse = document.getElementById('adresse');
-        if (adresse) {
-            adresse.addEventListener('click', function () {
-                let mapDiv = document.getElementById('map');
-                if (mapDiv) {
-                    mapDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    map.flyTo(coords, 18, {
-                        animate: true,
-                        duration: 1.8
-                    });
-                    marker.openPopup();
-                }
-            });
-        }
-    });
-
-    document.getElementById('mail').addEventListener('click', function() {
-        window.location.href = 'mailto:Sdarryy59@gmail.com';
-    });
-
-</script>
-
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+<script src="../assets/js/script.sam.js"></script>
 </body>
 </html>

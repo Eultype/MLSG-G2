@@ -1,21 +1,59 @@
+/* NAVBAR */
 .navbar {
     background-color: #fff;
     border-bottom: 1px solid #dee2e6;
 }
 
+.navbar-nav {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
 .nav-link:hover {
-    color: rgb(0, 168, 159) !important;
     font-weight: bold;
 }
 
-#contact:hover {
-    color: rgb(0, 168, 159) !important;
+
+.navbar-nav .nav-link.active {
+    font-weight: bold;                   /* Texte en gras */
+}
+
+/* NAV ITEM COULEUR SPEC */
+.nav_turq {
+    color: #00887d !important;
+}
+
+.nav_turq:hover {
+    color: #00A89F !important;
+}
+
+.nav_fram {
+    color: #B80044 !important;
+}
+
+.nav_fram:hover {
+    color: #E30056 !important;
+}
+
+.nav_prune {
+    color: #701c59 !important;
+}
+
+.nav_prune:hover {
+    color: #8D2676  !important;
 }
 
 .change:hover {
     background-color: rgb(227, 0, 86);
 }
 
+
+/* FOOTER */
 .footer {
     background-color: #1a1a1a;
     color: #fff;
@@ -76,7 +114,6 @@
     padding: 10px 20px;
     border-radius: 5px;
     margin-top: 20px;
-}
 
 .flou {
     filter: blur(3px);
@@ -85,3 +122,4 @@
 .flou:hover {
     filter: blur(0);
 }
+
