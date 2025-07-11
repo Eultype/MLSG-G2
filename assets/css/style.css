@@ -20,7 +20,8 @@
 
 
 .navbar-nav .nav-link.active {
-    font-weight: bold;                   /* Texte en gras */
+    font-weight: bold;
+    /* Texte en gras */
 }
 
 /* NAV ITEM COULEUR SPEC */
@@ -45,7 +46,7 @@
 }
 
 .nav_prune:hover {
-    color: #8D2676  !important;
+    color: #8D2676 !important;
 }
 
 .change:hover {
@@ -114,6 +115,7 @@
     padding: 10px 20px;
     border-radius: 5px;
     margin-top: 20px;
+}
 
 .flou {
     filter: blur(3px);
@@ -122,4 +124,3 @@
 .flou:hover {
     filter: blur(0);
 }
-
