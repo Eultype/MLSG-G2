@@ -30,6 +30,13 @@
     transition: color 0.15s, text-decoration-color 0.2s;
 }
 
+ul.list-unstyled a.title_turq:hover {
+    color: #17E9E0 !important;
+
+
+}
+
+
 #adresse:hover,
 #mail:hover{
     color: #BE6AAD;
