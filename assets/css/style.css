@@ -20,7 +20,8 @@
 
 
 .navbar-nav .nav-link.active {
-    font-weight: bold;                   /* Texte en gras */
+    font-weight: bold;
+    /* Texte en gras */
 }
 
 /* NAV ITEM COULEUR SPEC */
@@ -45,11 +46,11 @@
 }
 
 .nav_prune:hover {
-    color: #8D2676  !important;
+    color: #8D2676 !important;
 }
 
 .change:hover {
-    background-color: rgb(227, 0, 86) ;
+    background-color: rgb(227, 0, 86);
 }
 
 
@@ -66,7 +67,7 @@
 
 .footer a:hover {
     /* color: rgb(227, 0, 86); */
-    color: rgb(126, 44, 92) ;
+    color: rgb(126, 44, 92);
 }
 
 .footer-links {
@@ -116,3 +117,10 @@
     margin-top: 20px;
 }
 
+.flou {
+    filter: blur(3px);
+}
+
+.flou:hover {
+    filter: blur(0);
+}
